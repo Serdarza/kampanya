@@ -1,3 +1,4 @@
+```json
 {
   "kampanyalar": [
     {
@@ -50,7 +51,7 @@
     },
     {
       "baslik": "MSB Personeli ve Emeklilerine Özel Türk Telekom İndirimi!",
-      "aciklama": "Millî Savunma Bakanlığı ve Türk Telekom arasında imzalanan protokol kapsamında; TSK personeli, sivil memurlar ve emeklilere özel indirimli mobil hat tarifeleri sunulmaktadır. ",
+      "aciklama": "Millî Savunma Bakanlığı ve Türk Telekom arasında imzalanan protokol kapsamında; TSK personeli, sivil memurlar ve emeklilere özel indirimli mobil hat tarifeleri sunulmaktadır.",
       "link": "https://www.msb.gov.tr/Personel/icerik/038e0b8e010449929160c8d21a2e15da",
       "tarih": "2026-04-09T21:03:38Z"
     },
@@ -95,6 +96,67 @@
       "aciklama": "TSK mensupları (subay, astsubay, uzman çvş. vb.) ve tüm öğretmenlere %15 indirim! Ayrıca 65 yaş üstü ve 7-12 yaş çocuklara %50, gençlere (13-26 yaş) %15 indirim fırsatı sunulmaktadır. İndirimler Ekonomi/Pulman sınıflarında geçerlidir.",
       "link": "https://www.tcddtasimacilik.gov.tr/tr/indirimli_ucretsiz_tasimalar",
       "tarih": "2026-04-09T20:36:09Z"
+    },
+    {
+      "baslik": "Hatemoğlu TSK ve MEB Personeline %35 İndirim",
+      "aciklama": "TSK personeli ve emeklileri ile MEB öğretmenleri ve idari personeline özel Hatemoğlu mağazalarında ve online sitede perakende satış fiyatı üzerinden %35 indirim. Outlet, defolu ve PN ürünler hariçtir. 31.12.2026 tarihine kadar geçerlidir. Kod ile kullanılmaktadır.",
+      "link": "https://www.msb.gov.tr/Personel/icerik/1ceed6cebcda406bb4fbca1bb35c2d76",
+      "tarih": "2026-07-06T00:00:00Z"
+    },
+    {
+      "baslik": "Koçak Optik & Lens Öğretmenlere %50 Güneş Gözlüğü İndirimi",
+      "aciklama": "MEB öğretmenleri, idari personel ve birinci derece yakınlarına tüm güneş gözlüğü marka ve modellerinde etiket fiyatı üzerinden %50 indirim. Sadece fiziki mağazalarda geçerlidir. 31.05.2026’ya kadar.",
+      "link": "https://ogretmeniz.meb.gov.tr/kampanyalar-listesi/kocak-optik-lens",
+      "tarih": "2026-07-24T00:00:00Z"
+    },
+    {
+      "baslik": "MEB Öğretmenevleri ve Akşam Sanat Okullarında %50 Konaklama İndirimi",
+      "aciklama": "MEB personeli (tüm kadrolar), aile bireyleri (alt ve üst soy) ile emekli öğretmenler ve MEB emeklileri, öğretmenevleri ve akşam sanat okullarında kahvaltı hariç sivil misafir tarifesi üzerinden %50 indirimli konaklama hakkına sahiptir. 1 Ocak 2026’dan itibaren yürürlüktedir.",
+      "link": "https://www.meb.gov.tr/ogretmenevlerinde-konaklama-hizmetlerine-iliskin-kapsam-genisletildi/haber/39459/tr",
+      "tarih": "2026-01-06T00:00:00Z"
+    },
+    {
+      "baslik": "GATASES İşitme Cihazlarında MEB Personeline %35-%50 İndirim",
+      "aciklama": "MEB öğretmenleri, idari personel ve birinci derece yakınlarına işitme cihazı, test, servis ve yardımcı ürünlerde liste fiyatı üzerinden %35 ile %50 arasında indirim. 09.03.2027’ye kadar geçerlidir. Ankara, İstanbul ve İzmir şubelerinde.",
+      "link": "https://ogretmeniz.meb.gov.tr/kampanyalar-listesi/gatases-isitme-cihazlari-merkezi/",
+      "tarih": "2026-07-30T00:00:00Z"
+    },
+    {
+      "baslik": "TÖMER’den MEB Personeline %40 Dil Kursu İndirimi",
+      "aciklama": "MEB öğretmenleri, idari personel ve birinci derece yakınlarına genel ve özel amaçlı yabancı dil / Türkçe kurslarında liste fiyatı üzerinden %40 indirim. Materyaller hariçtir. 30.10.2030’a kadar geçerlidir.",
+      "link": "https://ogretmeniz.meb.gov.tr/kampanyalar-listesi/toemer/",
+      "tarih": "2026-07-30T00:00:00Z"
+    },
+    {
+      "baslik": "SEBİT HızlıGo Eğitim Yazılımında MEB Personeline %40 İndirim",
+      "aciklama": "MEB öğretmenleri ve idari personele HızlıGo ürününde %40 indirim. 31.08.2026’ya kadar geçerlidir. Kod ile hizligo.com üzerinden kullanılmaktadır.",
+      "link": "https://ogretmeniz.meb.gov.tr/kampanyalar-listesi/sebit/",
+      "tarih": "2026-07-30T00:00:00Z"
+    },
+    {
+      "baslik": "Otorapor’dan Kamu Personeline 750 TL Ekspertiz İndirimi",
+      "aciklama": "Kamu personeline Kamu Özel Paket’te (Kaporta/Boya, Motor, Mekanik, OBD/Beyin testleri) 750 TL indirim. Paket tutarı 6.000 TL’ye düşer. 31.12.2026’ya kadar. OtoraporGo uygulamasından başvuru yapılır.",
+      "link": "https://otorapor.com/kamu-kampanyasi",
+      "tarih": "2026-07-30T00:00:00Z"
+    },
+    {
+      "baslik": "Magnet Hastanelerinde MEB Personeline Sağlık İndirimi",
+      "aciklama": "MEB öğretmenleri, idari personel ve birinci derece yakınlarına muayene ve diş tedavilerinde %20, tetkik, medikal/cerrahi yatış ve check-up hizmetlerinde %10 indirim. 19.09.2026’ya kadar geçerlidir.",
+      "link": "https://ogretmeniz.meb.gov.tr/kampanyalar-listesi/magnet",
+      "tarih": "2026-07-30T00:00:00Z"
+    },
+    {
+      "baslik": "Altınyıldız Classics TSK Personeline %15 İndirim",
+      "aciklama": "TSK personeli ve emeklilerine Altınyıldız Classics ürünlerinde %15 indirim. 31.12.2026 tarihine kadar geçerlidir.",
+      "link": "https://www.msb.gov.tr/Personel/icerik/a6a265c64aae43aebf8905e8ebf7dc4d",
+      "tarih": "2026-07-13T00:00:00Z"
+    },
+    {
+      "baslik": "SETRMS’de MEB Personeline Ek Giyim İndirimi",
+      "aciklama": "MEB öğretmenleri, idari personel ve birinci derece yakınlarına SETRMS mağazalarında mevcut indirim oranı %49’a kadar olan dönemlerde ek %15, %50 ve üzeri dönemlerde ek %5 ilave indirim. 20.01.2027’ye kadar fiziki mağazalarda geçerlidir.",
+      "link": "https://ogretmeniz.meb.gov.tr/sayfalar/kampanyalar/",
+      "tarih": "2026-07-06T00:00:00Z"
     }
   ]
 }
+```
