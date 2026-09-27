@@ -1,0 +1,74 @@
+name: Kamu personeli kampanya taraması
+
+on:
+  schedule:
+    # Her gün 07:00 (Türkiye, UTC+3) = 04:00 UTC
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (dosya yazma, commit atma)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: campaign-collector
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TZ: Europe/Istanbul
+      PYTHONUNBUFFERED: "1"
+      # Girdi, kabuğa doğrudan gömülmez; yalnızca ortam değişkeni olarak okunur.
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Bağımlılıklar
+        run: python -m pip install --disable-pip-version-check -r requirements-dev.txt
+
+      - name: Lint ve testler
+        run: |
+          python -m ruff check collector tests
+          python -m pytest -q
+
+      - name: Kampanyaları tara
+        run: python -m collector
+
+      - name: Rapor
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: campaign-report
+          path: reports/last-run.json
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Değişiklik varsa commit ve push
+        if: env.DRY_RUN != 'true'
+        run: |
+          if [ -z "$(git status --porcelain -- kampanya.json .collector/state.json)" ]; then
+            echo "Değişiklik yok, commit oluşturulmadı."
+            exit 0
+          fi
+          python -c "import json; json.load(open('kampanya.json', encoding='utf-8'))"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- kampanya.json .collector/state.json
+          git commit -m "chore: automatic campaign update"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"

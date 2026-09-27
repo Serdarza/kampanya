@@ -1,0 +1,368 @@
+{
+  "$comment": "Resmi kampanya kaynakları. Yeni kaynak eklemek için 'sources' dizisine bir nesne ekleyin; kod değişikliği gerekmez. type: html_list (liste + detay sayfaları, linkPattern zorunlu) | html_page (tek kampanya sayfası) | rss | json_api (itemsPath + fields) | pdf. audienceFromSource=true: sayfadaki her kampanya 'audiences' kitlesine yöneliktir (ör. MEB öğretmen kampanya listesi); false ise her kayıt metninden ayrıca kamu personeline özel olduğu doğrulanır. Yalnızca kurumun/markanın/sendikanın kendi resmi sitesi eklenmelidir; haber, blog, forum ve kampanya toplayıcı siteler eklenmez. Geçici olarak devre dışı bırakmak için active=false.",
+  "defaults": {
+    "active": true,
+    "maxItems": 60,
+    "followPdfs": false,
+    "audienceFromSource": false
+  },
+  "sources": [
+    {
+      "id": "meb-ogretmeniz",
+      "name": "MEB ÖğretmenİZ Kampanyaları",
+      "organization": "Millî Eğitim Bakanlığı",
+      "url": "https://ogretmeniz.meb.gov.tr/sayfalar/kampanyalar/",
+      "type": "html_list",
+      "linkPattern": "^https://ogretmeniz\\.meb\\.gov\\.tr/kampanyalar-listesi/[a-z0-9-]+/?$",
+      "titleSelector": "h2.sec-title",
+      "organizationFromTitle": true,
+      "category": "teacher",
+      "audiences": [
+        "teacher"
+      ],
+      "audienceFromSource": true
+    },
+    {
+      "id": "msb-kurumsal-indirim",
+      "name": "MSB Kurumsal İndirim Uygulamaları",
+      "organization": "Millî Savunma Bakanlığı",
+      "url": "https://www.msb.gov.tr/KurumsalIndirimUygulamalari",
+      "type": "html_list",
+      "linkPattern": "^https://www\\.msb\\.gov\\.tr/Personel/icerik/[0-9a-f]{32}$",
+      "titleSelector": ".yan-sayfa-title h3",
+      "organizationFromTitle": true,
+      "followPdfs": true,
+      "category": "military",
+      "audiences": [
+        "military"
+      ],
+      "audienceFromSource": true
+    },
+    {
+      "id": "jsga-dil-indirim-protokolu",
+      "name": "JSGA Yabancı Dil Kurumları İndirim Protokolü",
+      "organization": "Jandarma ve Sahil Güvenlik Akademisi",
+      "url": "https://jsga.edu.tr/yabanci-dil-egitim-kurumlari-ile-yapilan-kurumsal-indirim-protokolu",
+      "type": "html_page",
+      "category": "education",
+      "audiences": [
+        "gendarmerie",
+        "coast_guard"
+      ],
+      "audienceFromSource": true
+    },
+    {
+      "id": "oyak-indirimli-satis",
+      "name": "OYAK İndirimli Satış Sistemi",
+      "organization": "OYAK",
+      "url": "https://www.oyak.com.tr/uye-hizmetleri/indirimli-satis-sistemi",
+      "type": "html_page",
+      "category": "automotive",
+      "audiences": [
+        "military"
+      ],
+      "audienceFromSource": true,
+      "title": "OYAK İndirimli Satış Sistemi"
+    },
+    {
+      "id": "turkegitimsen-kampanyalar",
+      "name": "Türk Eğitim-Sen Kampanyalar",
+      "organization": "Türk Eğitim-Sen",
+      "url": "https://www.turkegitimsen.org.tr/kampanyalar",
+      "type": "html_list",
+      "linkPattern": "^https://(?:www\\.)?turkegitimsen\\.org\\.tr/kampanyalar/[^/?#]+$",
+      "category": "teacher",
+      "audiences": [
+        "teacher"
+      ],
+      "audienceFromSource": true,
+      "titleSuffix": "Türk Eğitim-Sen Üyelerine Özel"
+    },
+    {
+      "id": "turksagliksen-kampanyalar",
+      "name": "Türk Sağlık-Sen Kampanyalar",
+      "organization": "Türk Sağlık-Sen",
+      "url": "https://www.turksagliksen.org.tr/kategori/kampanyalar",
+      "type": "html_list",
+      "linkPattern": "^https://(?:www\\.)?turksagliksen\\.org\\.tr/tss-haber/(?!kvkk|turk-saglik-sen-tuzuk)[^/?#]+$",
+      "category": "healthcare",
+      "audiences": [
+        "healthcare"
+      ],
+      "audienceFromSource": true,
+      "active": false,
+      "$comment": "Sayfa içeriği JavaScript ile yükleniyor; statik HTML'de kampanya metni yok. Sayfa yapısı değişirse yeniden etkinleştirin."
+    },
+    {
+      "id": "kamusen-kampanyalar",
+      "name": "Türkiye Kamu-Sen Kampanyalar",
+      "organization": "Türkiye Kamu-Sen",
+      "url": "https://www.kamusen.org.tr/kampanyalar",
+      "type": "html_list",
+      "linkPattern": "^https://(?:www\\.)?kamusen\\.org\\.tr/[a-z0-9%-]+\\.html$",
+      "category": "general_public_employee",
+      "audiences": [
+        "general_public_employee"
+      ],
+      "audienceFromSource": true,
+      "active": false,
+      "$comment": "Detay sayfasında ana başlık etiketi yok; ilgili haber başlıkları içerikle karışıyor. Seçici belirlenince etkinleştirin."
+    },
+    {
+      "id": "emniyet-sendikasi-anlasmalar",
+      "name": "Emniyet Teşkilatı Sendikası Anlaşmalar",
+      "organization": "Emniyet Teşkilatı Sendikası",
+      "url": "https://emniyet.org.tr/anlasma/",
+      "type": "html_list",
+      "linkPattern": "^https://(?:www\\.)?emniyet\\.org\\.tr/anlasma/[^/?#]+/?$",
+      "category": "police",
+      "audiences": [
+        "police"
+      ],
+      "audienceFromSource": true,
+      "titleSuffix": "Emniyet Teşkilatı Sendikası Üyelerine Özel"
+    },
+    {
+      "id": "istanbul-sagliksen-anlasmali-kurumlar",
+      "name": "Sağlık-Sen İstanbul 1 No'lu Şube Anlaşmalı Kurumlar",
+      "organization": "Sağlık-Sen İstanbul 1 No'lu Şube",
+      "url": "https://www.istanbulsagliksen.org.tr/anlasmali-kurumlar",
+      "type": "html_list",
+      "linkPattern": "^https://(?:www\\.)?istanbulsagliksen\\.org\\.tr/anlasmali-kurumlar/[a-z0-9-]*[a-z][a-z0-9-]*$",
+      "category": "healthcare",
+      "audiences": [
+        "healthcare"
+      ],
+      "audienceFromSource": true,
+      "active": false,
+      "$comment": "Detay sayfalarında indirim oranı/koşulu metin olarak yok (yalnızca görsel)."
+    },
+    {
+      "id": "egitimgucusen-kurumsal-anlasmalar",
+      "name": "Eğitim Gücü Sen Kurumsal Anlaşmalar",
+      "organization": "Eğitim Gücü Sen",
+      "url": "https://egitimgucusen.org.tr/bizden-haberler/kurumsal-anlasmalar/",
+      "type": "html_list",
+      "linkPattern": "^https://(?:www\\.)?egitimgucusen\\.org\\.tr/bizden-haberler/(?!basin-aciklamalari|duyurular|talepler|sendika-haberleri|basinda-biz|kurumsal-anlasmalar)[a-z0-9-]+/$",
+      "category": "teacher",
+      "audiences": [
+        "teacher"
+      ],
+      "audienceFromSource": true,
+      "titleSuffix": "Eğitim Gücü Sen Üyelerine Özel"
+    },
+    {
+      "id": "htksen-anlasmali-kurumlar",
+      "name": "HTKSEN Anlaşmalı Kurumlar",
+      "organization": "Hava Trafik Kontrolörleri Sendikası",
+      "url": "https://htksen.org/anlasmali-kurumlar",
+      "type": "html_list",
+      "linkPattern": "^https://(?:www\\.)?htksen\\.org/anlasmali-kurumlar/[a-z0-9-]+/\\d+$",
+      "category": "civil_servant",
+      "audiences": [
+        "civil_servant"
+      ],
+      "audienceFromSource": true,
+      "titleSuffix": "HTKSEN Üyelerine Özel"
+    },
+    {
+      "id": "turktelekom-kamu-20gb",
+      "name": "Türk Telekom Kamu Çalışan 20 GB Tarifesi",
+      "organization": "Türk Telekom",
+      "url": "https://bireysel.turktelekom.com.tr/ozel-programlar/calisanlar/mevcut-musteri-kamu-tarifeleri/kamu-calisan-20-gb-tarifesi",
+      "type": "html_page",
+      "category": "technology",
+      "audiences": [
+        "general_public_employee"
+      ],
+      "audienceFromSource": true,
+      "active": false,
+      "$comment": "Sayfa içeriği JavaScript ile yükleniyor; statik HTML'de kampanya metni yok. Sayfa yapısı değişirse yeniden etkinleştirin."
+    },
+    {
+      "id": "turktelekom-meb-5gb",
+      "name": "Türk Telekom MEB 5 GB Tarifesi",
+      "organization": "Türk Telekom",
+      "url": "https://bireysel.turktelekom.com.tr/tt-mobil/tarife-ve-paketler/Sayfalar/diger-teklifler/meb-5gb-tarifesi.aspx",
+      "type": "html_page",
+      "category": "technology",
+      "audiences": [
+        "teacher"
+      ],
+      "audienceFromSource": true,
+      "active": false,
+      "$comment": "Sayfa içeriği JavaScript ile yükleniyor; statik HTML'de kampanya metni yok. Sayfa yapısı değişirse yeniden etkinleştirin."
+    },
+    {
+      "id": "turktelekom-msb-20gb",
+      "name": "Türk Telekom MSB 20 GB Tarifesi",
+      "organization": "Türk Telekom",
+      "url": "https://bireysel.turktelekom.com.tr/tt-mobil/tarife-ve-paketler/Sayfalar/diger-teklifler/msb-20gb-tarifesi.aspx",
+      "type": "html_page",
+      "category": "technology",
+      "audiences": [
+        "military"
+      ],
+      "audienceFromSource": true,
+      "active": false,
+      "$comment": "Sayfa içeriği JavaScript ile yükleniyor; statik HTML'de kampanya metni yok. Sayfa yapısı değişirse yeniden etkinleştirin."
+    },
+    {
+      "id": "turktelekom-emniyet-20",
+      "name": "Türk Telekom Emniyet 20 Tarifesi",
+      "organization": "Türk Telekom",
+      "url": "https://bireysel.turktelekom.com.tr/tt-mobil/tarife-ve-paketler/Sayfalar/diger-teklifler/emniyet-yeni-20-tarifesi.aspx",
+      "type": "html_page",
+      "category": "technology",
+      "audiences": [
+        "police"
+      ],
+      "audienceFromSource": true,
+      "active": false,
+      "$comment": "Sayfa içeriği JavaScript ile yükleniyor; statik HTML'de kampanya metni yok. Sayfa yapısı değişirse yeniden etkinleştirin."
+    },
+    {
+      "id": "turkcell-apple-egitim",
+      "name": "Turkcell Pasaj Apple Eğitim İndirimi",
+      "organization": "Turkcell",
+      "url": "https://www.turkcell.com.tr/kampanya/pasaj/apple-egitim-indirimi/",
+      "type": "html_page",
+      "category": "technology",
+      "audiences": [
+        "teacher"
+      ]
+    },
+    {
+      "id": "yolcu360-meb",
+      "name": "Yolcu360 MEB Personeli Kampanyası",
+      "organization": "Yolcu360",
+      "url": "https://yolcu360.com/kampanya/milliegitim-bakanligi",
+      "type": "html_page",
+      "category": "transport",
+      "audiences": [
+        "teacher"
+      ],
+      "audienceFromSource": true,
+      "title": "Yolcu360 Araç Kiralama"
+    },
+    {
+      "id": "enterprise-polis-tsk",
+      "name": "Enterprise Polis ve TSK Çalışan İndirimi",
+      "organization": "Enterprise Rent-A-Car",
+      "url": "https://www.enterprise.com.tr/kampanyalar/polis-tsk-calisan-indirimi",
+      "type": "html_page",
+      "category": "transport",
+      "audiences": [
+        "police",
+        "military"
+      ],
+      "titleSelector": "head > title",
+      "contentSelector": "div.container:has(> h3)",
+      "audienceFromSource": true
+    },
+    {
+      "id": "enterprise-saglik",
+      "name": "Enterprise Sağlık Çalışanlarına Özel İndirim",
+      "organization": "Enterprise Rent-A-Car",
+      "url": "https://www.enterprise.com.tr/kampanyalar/saglik-calisanlarina-ozel-indirim",
+      "type": "html_page",
+      "category": "transport",
+      "audiences": [
+        "healthcare"
+      ],
+      "titleSelector": "head > title",
+      "contentSelector": "div.container:has(> h3)",
+      "audienceFromSource": true
+    },
+    {
+      "id": "enterprise-tbmm",
+      "name": "Enterprise TBMM Personeline İndirim",
+      "organization": "Enterprise Rent-A-Car",
+      "url": "https://www.enterprise.com.tr/kampanyalar/tbmm-personel",
+      "type": "html_page",
+      "category": "transport",
+      "audiences": [
+        "civil_servant"
+      ],
+      "titleSelector": "head > title",
+      "contentSelector": "div.container:has(> h3)",
+      "audienceFromSource": true
+    },
+    {
+      "id": "garenta-ibb",
+      "name": "Garenta İBB Çalışanlarına Özel",
+      "organization": "Garenta",
+      "url": "https://www.garenta.com/tr/arac-kiralama-kampanyalari/detay/ibb-calisan-kampanyasi",
+      "type": "html_page",
+      "category": "transport",
+      "audiences": [
+        "municipal"
+      ],
+      "audienceFromSource": true
+    },
+    {
+      "id": "garenta-saglik",
+      "name": "Garenta Birinci Basamak Sağlık Çalışanları",
+      "organization": "Garenta",
+      "url": "https://www.garenta.com/tr/arac-kiralama-kampanyalari/detay/garenta-saglik-calisan",
+      "type": "html_page",
+      "category": "transport",
+      "audiences": [
+        "healthcare"
+      ],
+      "audienceFromSource": true
+    },
+    {
+      "id": "skyes-saglik",
+      "name": "Skyes Sağlık Çalışanlarına İndirim",
+      "organization": "Skyes Car Rental",
+      "url": "https://www.skyescarrental.com/kampanyalar/saglik-calisanlarina-10-indirim",
+      "type": "html_page",
+      "category": "transport",
+      "audiences": [
+        "healthcare"
+      ],
+      "audienceFromSource": true
+    },
+    {
+      "id": "skyes-polis",
+      "name": "Skyes Polis ve Şehit Ailelerine İndirim",
+      "organization": "Skyes Car Rental",
+      "url": "https://www.skyescarrental.com/kampanyalar/tskpolis-ve-sehit-ailelerine-10-indirim",
+      "type": "html_page",
+      "category": "transport",
+      "audiences": [
+        "police"
+      ],
+      "audienceFromSource": true
+    },
+    {
+      "id": "istabip-arcelik-beko",
+      "name": "İstanbul Tabip Odası Üyelerine Arçelik ve Beko İndirimi",
+      "organization": "İstanbul Tabip Odası",
+      "url": "https://www.istabip.org.tr/8955-istanbul-tabip-odasi-uyelerine-ozel-arcelik-ve-beko-indirim-kampanyasi-basladi.html",
+      "type": "html_page",
+      "category": "doctor",
+      "audiences": [
+        "doctor"
+      ],
+      "audienceFromSource": true,
+      "titleSelector": "header h2.h1",
+      "contentSelector": ".sitetxt"
+    },
+    {
+      "id": "aes-anlasmali-firmalar",
+      "name": "Anadolu Eğitim Sendikası Anlaşmalı Kurumlar",
+      "organization": "Anadolu Eğitim Sendikası",
+      "url": "https://www.aes.org.tr/anlasmali-firmalar",
+      "type": "html_page",
+      "active": false,
+      "category": "teacher",
+      "audiences": [
+        "teacher"
+      ],
+      "audienceFromSource": true,
+      "$comment": "Tek sayfada ~287 firma listesi; kampanya bazında ayrıştırılamıyor."
+    }
+  ]
+}
