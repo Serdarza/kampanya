@@ -22,6 +22,13 @@
       "end": "2026-12-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
     },
+    "id:auto-0931ea89180f": {
+      "source": "egitimgucusen-kurumsal-anlasmalar",
+      "fingerprint": "80d7453eeb60a25a",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-09-27"
+    },
     "id:auto-0b0c39086141": {
       "source": "meb-ogretmeniz",
       "fingerprint": "d747dc5dc3740cec",
@@ -50,25 +57,11 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
-    "id:auto-149703541f68": {
-      "source": "birliksagliksen-anlasmali-kurumlar",
-      "fingerprint": "854659d947dfe45e",
-      "start": null,
-      "end": null,
-      "firstSeen": "2026-09-27"
-    },
     "id:auto-1623ca39fcef": {
       "source": "meb-ogretmeniz",
       "fingerprint": "87c784a1b3ef283f",
       "start": null,
       "end": "2027-06-01T23:59:59+03:00",
-      "firstSeen": "2026-09-27"
-    },
-    "id:auto-1651f5087a3f": {
-      "source": "birliksagliksen-anlasmali-kurumlar",
-      "fingerprint": "2d6c8b1187cc3a3c",
-      "start": null,
-      "end": null,
       "firstSeen": "2026-09-27"
     },
     "id:auto-17097c6f1cef": {
@@ -83,6 +76,13 @@
       "fingerprint": "90e9bbb3a0ebea60",
       "start": null,
       "end": "2026-12-31T23:59:59+03:00",
+      "firstSeen": "2026-09-27"
+    },
+    "id:auto-1cff268f80c0": {
+      "source": "egitimgucusen-kurumsal-anlasmalar",
+      "fingerprint": "c31807eba2ea2713",
+      "start": null,
+      "end": null,
       "firstSeen": "2026-09-27"
     },
     "id:auto-20ed57c0b4a2": {
@@ -155,6 +155,13 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
+    "id:auto-337831d03542": {
+      "source": "egitimgucusen-kurumsal-anlasmalar",
+      "fingerprint": "b6949f3eeec7c3f1",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-09-27"
+    },
     "id:auto-342b617439c5": {
       "source": "kamusen-konfederasyon-anlasmalari",
       "fingerprint": "38a05679ea22fe65",
@@ -190,6 +197,13 @@
       "end": "2027-06-10T23:59:59+03:00",
       "firstSeen": "2026-09-27"
     },
+    "id:auto-41e1e7561408": {
+      "source": "egitimgucusen-kurumsal-anlasmalar",
+      "fingerprint": "99337ba3f340b210",
+      "start": "2026-06-25T00:00:00+03:00",
+      "end": "2026-12-31T23:59:59+03:00",
+      "firstSeen": "2026-09-27"
+    },
     "id:auto-45c72a1a35dc": {
       "source": "skyes-saglik",
       "fingerprint": "aac6279d7ee138ef",
@@ -204,9 +218,23 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
+    "id:auto-4d6b698b1078": {
+      "source": "egitimgucusen-kurumsal-anlasmalar",
+      "fingerprint": "22e139ed5efa8cbf",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-09-27"
+    },
     "id:auto-4df70dc0dadc": {
       "source": "kamusen-konfederasyon-anlasmalari",
       "fingerprint": "535aabc59baa6011",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-09-27"
+    },
+    "id:auto-53802ebe2b99": {
+      "source": "egitimgucusen-kurumsal-anlasmalar",
+      "fingerprint": "24c850b32d1a22c6",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -253,13 +281,6 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
-    "id:auto-5d6c3cf668a1": {
-      "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "3088e66d4ff5925e",
-      "start": null,
-      "end": null,
-      "firstSeen": "2026-09-27"
-    },
     "id:auto-5eafbcafe46b": {
       "source": "turkegitimsen-kampanyalar",
       "fingerprint": "e0e2b0468a15eeba",
@@ -274,16 +295,16 @@
       "end": "2027-03-01T23:59:59+03:00",
       "firstSeen": "2026-09-27"
     },
-    "id:auto-60a066f70ad6": {
-      "source": "birliksagliksen-anlasmali-kurumlar",
-      "fingerprint": "80d7d437084e410b",
+    "id:auto-644abf056a4c": {
+      "source": "hurriyetciegitimsen-kampanyalar",
+      "fingerprint": "6b57b82d397d3577",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
     },
-    "id:auto-644abf056a4c": {
-      "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "6b57b82d397d3577",
+    "id:auto-678c83b5ceaa": {
+      "source": "egitimgucusen-kurumsal-anlasmalar",
+      "fingerprint": "67f3750dce154780",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -319,13 +340,6 @@
     "id:auto-76016819b36e": {
       "source": "emniyet-sendikasi-anlasmalar",
       "fingerprint": "27887676babfe2c7",
-      "start": null,
-      "end": null,
-      "firstSeen": "2026-09-27"
-    },
-    "id:auto-7713524d284c": {
-      "source": "birliksagliksen-anlasmali-kurumlar",
-      "fingerprint": "d2d1e59ddf7aeb31",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -414,6 +428,13 @@
       "end": "2027-07-04T23:59:59+03:00",
       "firstSeen": "2026-09-27"
     },
+    "id:auto-a1f11ca236a2": {
+      "source": "egitimgucusen-kurumsal-anlasmalar",
+      "fingerprint": "bde433bc0812978d",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-09-27"
+    },
     "id:auto-a21e62365a6d": {
       "source": "birliksagliksen-anlasmali-kurumlar",
       "fingerprint": "b7d9ef6c25d4623f",
@@ -431,13 +452,6 @@
     "id:auto-a49c7aab0840": {
       "source": "hurriyetciegitimsen-kampanyalar",
       "fingerprint": "15ea18e677217a2e",
-      "start": null,
-      "end": null,
-      "firstSeen": "2026-09-27"
-    },
-    "id:auto-a63a3a2641cf": {
-      "source": "kamusen-konfederasyon-anlasmalari",
-      "fingerprint": "615b1860f4614214",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -466,6 +480,13 @@
     "id:auto-a805a32e6330": {
       "source": "msb-kurumsal-indirim",
       "fingerprint": "915cdbb9519e6cc8",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-09-27"
+    },
+    "id:auto-abdf2da6d6b1": {
+      "source": "egitimgucusen-kurumsal-anlasmalar",
+      "fingerprint": "b79a8a273e0fa614",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -589,6 +610,13 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
+    "id:auto-e2f4c2494cb2": {
+      "source": "egitimgucusen-kurumsal-anlasmalar",
+      "fingerprint": "03f9de8f8a3b7da9",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-09-27"
+    },
     "id:auto-e2f57471a233": {
       "source": "turkegitimsen-kampanyalar",
       "fingerprint": "3525b7eb45aa3525",
@@ -620,6 +648,13 @@
     "id:auto-f6e0392cbdb5": {
       "source": "hurriyetciegitimsen-kampanyalar",
       "fingerprint": "e0f9949b3cc12bf8",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-09-27"
+    },
+    "id:auto-fb54d1a42a43": {
+      "source": "egitimgucusen-kurumsal-anlasmalar",
+      "fingerprint": "011e5319359f66cb",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"

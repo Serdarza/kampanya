@@ -123,6 +123,35 @@ def test_page_parsing_ignores_related_links_and_keeps_header_title():
     assert "%40" not in page.text
 
 
+@pytest.mark.parametrize(
+    ("title", "excluded"),
+    [
+        ("Allianz Tamamlayıcı Sağlık Sigortası %17,5 İndirim", True),
+        ("Kasko ve Trafik Poliçelerinde İndirim", True),
+        ("Protez Tırnak Kalıcı Oje İşlemlerinde %15 İndirim", True),
+        ("Güzellik Salonu Makyaj Hizmetlerinde İndirim", True),
+        ("Eğitim Projesi Kapsamında Öğretmenlere İndirim", False),
+        ("Kapadokus Thermal Hotel: %25 İndirim", False),
+    ],
+)
+def test_excluded_categories(title, excluded):
+    from collector.classify import is_excluded_category
+
+    assert is_excluded_category(title) is excluded
+    c = classify(title, "Üyelerimize özel %20 indirim.", ["teacher"], True)
+    assert c.is_public_employee is not excluded
+
+
+def test_merge_drops_existing_excluded_records():
+    recs = [
+        {"id": "a", "baslik": "Kuaför Hizmetlerinde Üyelere %20 İndirim", "link": "https://x/a"},
+        {"id": "b", "baslik": "Otelde Öğretmenlere %20 İndirim", "link": "https://x/b"},
+    ]
+    res = merge(recs, {}, [], NOW)
+    assert [r["id"] for r in res.records] == ["b"]
+    assert res.changed
+
+
 def test_title_suffix_only_when_audience_missing():
     from conftest import make_source
 

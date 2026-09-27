@@ -10,7 +10,14 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import datetime
 
-from .classify import AUDIENCES, CATEGORY_LABELS, audience_labels, classify, detect_audiences
+from .classify import (
+    AUDIENCES,
+    CATEGORY_LABELS,
+    audience_labels,
+    classify,
+    detect_audiences,
+    is_excluded_category,
+)
 from .config import Source
 from .dates import DateInfo, extract_dates, format_tr, from_iso, is_expired, to_iso_tr
 from .extract import (
@@ -386,12 +393,19 @@ class RunResult:
     expired_removed: list[dict] = field(default_factory=list)
     expired_skipped: list[str] = field(default_factory=list)
     duplicate_records_removed: list[dict] = field(default_factory=list)
+    excluded_removed: list[dict] = field(default_factory=list)
     no_date: list[str] = field(default_factory=list)
     upcoming: list[str] = field(default_factory=list)
 
     @property
     def changed(self) -> bool:
-        return bool(self.added or self.updated or self.expired_removed or self.duplicate_records_removed)
+        return bool(
+            self.added
+            or self.updated
+            or self.expired_removed
+            or self.duplicate_records_removed
+            or self.excluded_removed
+        )
 
 
 def _facts_differ_from_record(c: Candidate, rec: dict) -> bool:
@@ -488,8 +502,19 @@ def merge(records: list[dict], state: dict, reports: list[SourceReport], now: da
     # Yeni kayıtlar listenin başına (uygulama zaten tarihe göre sıralar).
     records[:] = records[first_new:][::-1] + records[:first_new]
     _dedupe_existing(res)
+    _drop_excluded(res)
     _expire(res, now)
     return res
+
+
+def _drop_excluded(res: RunResult) -> None:
+    keep = []
+    for rec in res.records:
+        if is_excluded_category(record_title(rec)):
+            res.excluded_removed.append(rec)
+        else:
+            keep.append(rec)
+    res.records[:] = keep
 
 
 def _state_entry(c: Candidate, now: datetime, fp: str, prev: dict | None) -> dict:

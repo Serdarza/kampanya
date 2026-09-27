@@ -164,11 +164,11 @@ def test_campaign_without_date_is_added_and_never_expired(now):
 # 8. Kamu personeline özel kampanya
 def test_public_employee_campaign_is_accepted():
     page = detail_page(
-        "Kamu Personeline Özel Kasko Kampanyası",
-        "Kamu personeline özel kasko poliçelerinde %20 indirim uygulanmaktadır.",
+        "Kamu Personeline Özel Akaryakıt Kampanyası",
+        "Kamu personeline özel akaryakıt alımlarında %20 indirim uygulanmaktadır.",
         "Kampanya 30.11.2026 tarihine kadar geçerlidir.",
     )
-    rep, res = run({LIST_URL: list_page("kasko"), BASE + "kasko/": page}, [])
+    rep, res = run({LIST_URL: list_page("akaryakit"), BASE + "akaryakit/": page}, [])
     assert len(rep.candidates) == 1
     assert rep.candidates[0].audiences == ["general_public_employee"]
     assert "Kamu Personeli" in res.records[0]["etiketler"]

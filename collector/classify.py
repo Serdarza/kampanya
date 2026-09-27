@@ -116,6 +116,15 @@ _GENERIC_PUBLIC = re.compile(
 _NEWS_ONLY = re.compile(r"(ihale ilani|atama sonuc|sinav takvim|basvuru sonuc|duyuru metni|vefat)")
 _STAFF_HINT = re.compile(r"(personel|calisan|mensup|gorevli|memur|ogretmen|emekli|uyelerimiz|uyelerine|sendika)")
 _NON_STAFF = re.compile(r"(ogrenci|bursiyer|burslu)")
+# Yayınlanmayan kategoriler; yalnızca başlıkta aranır ("sigorta dahil" gibi gövde ifadeleri elenmesin).
+_EXCLUDED_CATEGORY = re.compile(
+    r"(sigorta|kasko|\bpolice|guzellik|kuafor|\boje\b|tirnak|manikur|pedikur|makyaj|kozmetik"
+    r"|epilasyon|cilt bakim|kirpik)"
+)
+
+
+def is_excluded_category(title: str) -> bool:
+    return bool(_EXCLUDED_CATEGORY.search(fold(title)))
 
 
 @dataclass
@@ -144,6 +153,8 @@ def audience_labels(keys: list[str]) -> list[str]:
 
 def classify(title: str, body: str, source_audiences: list[str], audience_from_source: bool) -> Classification:
     t = fold(f"{title}\n{body}")
+    if is_excluded_category(title):
+        return Classification(False, False, reason="excluded category (insurance/beauty)")
     if _NEWS_ONLY.search(fold(title)):
         return Classification(False, False, reason="not a campaign (news/announcement)")
     if not _OFFER.search(t):

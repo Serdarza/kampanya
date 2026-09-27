@@ -68,6 +68,7 @@ def _summary(reports: list[SourceReport], total: int, res: RunResult, dry: bool)
         f"Expired removed:        {len(res.expired_removed)}",
         f"Expired (not added):    {len(res.expired_skipped)}",
         f"Duplicate records rm:   {len(res.duplicate_records_removed)}",
+        f"Excluded category rm:   {len(res.excluded_removed)}",
         f"Without end date:       {len(res.no_date)}",
         f"Upcoming (not started): {len(res.upcoming)}",
         f"Total campaigns now:    {len(res.records)}",
@@ -86,6 +87,8 @@ def _details(res: RunResult) -> str:
         out.append(f"- EXPIRED  {record_title(r)}")
     for r in res.duplicate_records_removed:
         out.append(f"- DUPLICATE RECORD  {record_title(r)}")
+    for r in res.excluded_removed:
+        out.append(f"- EXCLUDED  {record_title(r)}")
     return "\n".join(out)
 
 
@@ -156,6 +159,7 @@ def main(argv: list[str] | None = None) -> int:
                 "updated": [{"before": o, "after": n} for o, n in res.updated],
                 "expiredRemoved": res.expired_removed,
                 "duplicateRecordsRemoved": res.duplicate_records_removed,
+                "excludedRemoved": res.excluded_removed,
                 "duplicates": res.duplicates,
                 "noEndDate": res.no_date,
             }
