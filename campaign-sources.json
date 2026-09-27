@@ -163,7 +163,9 @@
         "civil_servant"
       ],
       "audienceFromSource": true,
-      "titleSuffix": "HTKSEN Üyelerine Özel"
+      "titleSuffix": "HTKSEN Üyelerine Özel",
+      "active": false,
+      "$comment": "Yaln?zca HTKSEN (hava trafik kontrol?rleri) ?yelerine ?zel; genel kamu personeli kampanyas? gibi g?r?nmemesi i?in kapal?."
     },
     {
       "id": "turktelekom-kamu-20gb",
@@ -286,7 +288,9 @@
       ],
       "titleSelector": "head > title",
       "contentSelector": "div.container:has(> h3)",
-      "audienceFromSource": true
+      "audienceFromSource": true,
+      "active": false,
+      "$comment": "Yaln?zca TBMM personeline ?zel; uygulamada ayr? bir grup olmad??? i?in kapal?."
     },
     {
       "id": "garenta-ibb",
