@@ -134,6 +134,11 @@ def test_title_suffix_only_when_audience_missing():
     assert build_title(c) == "Allianz Sigorta İndirim Anlaşması – HTKSEN Üyelerine Özel"
     c.title = "Sendika Üyelerine Özel Otel İndirimi"
     assert build_title(c) == "Sendika Üyelerine Özel Otel İndirimi"
+    c.title = "KAPADOKUS THERMAL HOTEL"
+    c.discounts = ["%25"]
+    assert build_title(c) == "Kapadokus Thermal Hotel: %25 İndirim – HTKSEN Üyelerine Özel"
+    c.discounts = []
+    assert build_title(c) == "Kapadokus Thermal Hotel: Kurumsal İndirim – HTKSEN Üyelerine Özel"
 
 
 def test_manual_and_mailto_records_are_preserved():

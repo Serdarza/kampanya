@@ -221,24 +221,34 @@ def build_title(c: Candidate) -> str:
     t = c.title.strip()
     if t.isupper() or (sum(ch.isupper() for ch in t) > 0.7 * max(1, sum(ch.isalpha() for ch in t))):
         t = tr_title_case(t)
+    pcts = sorted({int(d[1:]) for d in c.discounts if d.startswith("%")})
     if (
         c.source.title_suffix
         and not re.search(r"uye(?:ler|lerimiz)|mensup|personel|calisan", fold(t))
         and not detect_audiences(t)
     ):
-        t = f"{t} – {c.source.title_suffix}"
+        if not _TITLE_HAS_OFFER.search(fold(t)):
+            t = f"{t}: {_pct_phrase(pcts) or 'Kurumsal İndirim'}"
+        return f"{t} – {c.source.title_suffix}"
     if _TITLE_HAS_OFFER.search(fold(t)):
         return t
     aud = _primary_audiences(c)
     if not aud:
         return t
     target = _DATIVE[aud[0]] if len(aud) == 1 else f"{_SHORT[aud[0]]} ve {_DATIVE[aud[1]]}"
-    pcts = sorted({int(d[1:]) for d in c.discounts if d.startswith("%")})
     if not pcts:
         return f"{t}: {target} Özel Kampanya"
     if len(pcts) == 1:
         return f"{t}: {target} Özel %{pcts[0]} İndirim"
     return f"{t}: {target} Özel %{pcts[-1]}'{_dative_suffix(pcts[-1])} Varan İndirim"
+
+
+def _pct_phrase(pcts: list[int]) -> str:
+    if not pcts:
+        return ""
+    if len(pcts) == 1:
+        return f"%{pcts[0]} İndirim"
+    return f"%{pcts[-1]}'{_dative_suffix(pcts[-1])} Varan İndirim"
 
 
 def _dative_suffix(n: int) -> str:

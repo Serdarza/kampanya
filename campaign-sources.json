@@ -165,7 +165,7 @@
       "audienceFromSource": true,
       "titleSuffix": "HTKSEN Üyelerine Özel",
       "active": false,
-      "$comment": "Yaln?zca HTKSEN (hava trafik kontrol?rleri) ?yelerine ?zel; genel kamu personeli kampanyas? gibi g?r?nmemesi i?in kapal?."
+      "$comment": "Yalnızca HTKSEN (hava trafik kontrolörleri) üyelerine özel; genel kamu personeli kampanyası gibi görünmemesi için kapalı."
     },
     {
       "id": "turktelekom-kamu-20gb",
@@ -290,7 +290,7 @@
       "contentSelector": "div.container:has(> h3)",
       "audienceFromSource": true,
       "active": false,
-      "$comment": "Yaln?zca TBMM personeline ?zel; uygulamada ayr? bir grup olmad??? i?in kapal?."
+      "$comment": "Yalnızca TBMM personeline özel; uygulamada ayrı bir grup olmadığı için kapalı."
     },
     {
       "id": "garenta-ibb",
@@ -367,6 +367,53 @@
       ],
       "audienceFromSource": true,
       "$comment": "Tek sayfada ~287 firma listesi; kampanya bazında ayrıştırılamıyor."
+    },
+    {
+      "id": "kamusen-konfederasyon-anlasmalari",
+      "name": "Türkiye Kamu-Sen Anlaşmalı Kurumlar (Türk Diyanet Vakıf-Sen)",
+      "organization": "Türkiye Kamu-Sen",
+      "url": "https://turkdiyanetvakifsen.org.tr/anlasmali-kurumlarimiz",
+      "type": "html_list",
+      "linkPattern": "^https://turkdiyanetvakifsen\\.org\\.tr/anlasmali-kurumlarimiz/(?!ferdi-kaza)[a-z0-9-]+$",
+      "titleSelector": "article h1",
+      "contentSelector": "article",
+      "category": "general_public_employee",
+      "audiences": [
+        "general_public_employee"
+      ],
+      "audienceFromSource": true,
+      "titleSuffix": "Türkiye Kamu-Sen Üyelerine Özel",
+      "$comment": "Konfederasyon anlaşmaları tüm Kamu-Sen üyelerine geçerlidir; kamusen.org.tr detay sayfaları ayrıştırılamadığı için bağlı sendikanın düzenli listesi kullanılır."
+    },
+    {
+      "id": "hurriyetciegitimsen-kampanyalar",
+      "name": "Hürriyetçi Eğitim-Sen Kampanyalar",
+      "organization": "Hürriyetçi Eğitim-Sen",
+      "url": "https://hurriyetciegitimsen.org.tr/guncel/kampanyalar/",
+      "type": "html_list",
+      "linkPattern": "^https://hurriyetciegitimsen\\.org\\.tr/[a-z0-9%-]*(indirim|anlasma|kampanya|protokol|ayricalik)[a-z0-9%-]*/$",
+      "category": "teacher",
+      "audiences": [
+        "teacher"
+      ],
+      "audienceFromSource": true,
+      "maxItems": 30,
+      "titleSuffix": "Hürriyetçi Eğitim-Sen Üyelerine Özel"
+    },
+    {
+      "id": "birliksagliksen-anlasmali-kurumlar",
+      "name": "Birlik Sağlık-Sen Anlaşmalı Kurumlar",
+      "organization": "Birlik Sağlık-Sen",
+      "url": "https://www.birliksagliksen.org.tr/category/anlasmalikurumlar/",
+      "type": "html_list",
+      "linkPattern": "^https://(?:www\\.)?birliksagliksen\\.org\\.tr/20\\d\\d/\\d\\d/\\d\\d/(?![^/]*promosyon)[^/]*(indirim|anlasma|anlasamsi|uyelere|uyelerimize)[^/]*/$",
+      "category": "healthcare",
+      "audiences": [
+        "healthcare"
+      ],
+      "audienceFromSource": true,
+      "maxItems": 30,
+      "titleSuffix": "Birlik Sağlık-Sen Üyelerine Özel"
     }
   ]
 }
