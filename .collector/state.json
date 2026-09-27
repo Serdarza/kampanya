@@ -176,13 +176,6 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
-    "id:auto-3a2676097efd": {
-      "source": "birliksagliksen-anlasmali-kurumlar",
-      "fingerprint": "bcd269d83be6a11e",
-      "start": null,
-      "end": null,
-      "firstSeen": "2026-09-27"
-    },
     "id:auto-3d18fda775db": {
       "source": "enterprise-saglik",
       "fingerprint": "9d80b8b476a67909",
@@ -501,13 +494,6 @@
     "id:auto-b5389371d509": {
       "source": "oyak-indirimli-satis",
       "fingerprint": "11d05735a94dcd33",
-      "start": null,
-      "end": null,
-      "firstSeen": "2026-09-27"
-    },
-    "id:auto-b7a0415137d1": {
-      "source": "birliksagliksen-anlasmali-kurumlar",
-      "fingerprint": "8624889b50751441",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"

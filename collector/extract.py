@@ -112,6 +112,37 @@ def _jsonld(soup: BeautifulSoup) -> tuple[datetime | None, datetime | None]:
     return start, end
 
 
+_URL_DATE = re.compile(r"/(20\d\d)/(0[1-9]|1[0-2])/(0[1-9]|[12]\d|3[01])/")
+
+
+def _published(soup: BeautifulSoup, url: str) -> datetime | None:
+    """Sayfanın yayın tarihi: meta etiketleri, JSON-LD, <time> veya /YYYY/MM/DD/ URL'si."""
+    for attrs in (
+        {"property": "article:published_time"},
+        {"itemprop": "datePublished"},
+        {"name": "pubdate"},
+        {"name": "publish-date"},
+        {"name": "date"},
+    ):
+        el = soup.find("meta", attrs=attrs)
+        d = from_iso(el.get("content")) if el and isinstance(el.get("content"), str) else None
+        if d:
+            return published_to_tr(d)
+    for s in soup.find_all("script", type="application/ld+json"):
+        m = re.search(r'"datePublished"\s*:\s*"([^"]+)"', s.string or "")
+        d = from_iso(m.group(1)) if m else None
+        if d:
+            return published_to_tr(d)
+    el = soup.find("time", attrs={"datetime": True})
+    d = from_iso(el["datetime"]) if el and isinstance(el.get("datetime"), str) else None
+    if d:
+        return published_to_tr(d)
+    m = _URL_DATE.search(url)
+    if m:
+        return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)), tzinfo=TR_TZ)
+    return None
+
+
 def _content_root(soup: BeautifulSoup, title_el: Tag | None, selector: str | None) -> Tag:
     if selector:
         el = soup.select_one(selector)
@@ -135,6 +166,7 @@ def parse_html_page(
 ) -> Page:
     soup = soup_of(content)
     start, end = _jsonld(soup)
+    published = _published(soup, url)
     og = soup.find("meta", property="og:title")
     pdfs = [
         strip_fragment(urljoin(url, a["href"]))
@@ -180,7 +212,15 @@ def parse_html_page(
             lines[-1] = f"{lines[-1]} {line}"  # "Nakit ödemelerde" + "%15"
             continue
         lines.append(line)
-    return Page(url, title, "\n".join(lines), jsonld_start=start, jsonld_end=end, pdf_links=list(dict.fromkeys(pdfs)))
+    return Page(
+        url,
+        title,
+        "\n".join(lines),
+        published=published,
+        jsonld_start=start,
+        jsonld_end=end,
+        pdf_links=list(dict.fromkeys(pdfs)),
+    )
 
 
 def _usable_heading(h) -> bool:

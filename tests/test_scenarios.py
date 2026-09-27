@@ -203,6 +203,49 @@ def test_multiple_public_employee_groups():
     assert {"Öğretmen", "Sağlık Çalışanı", "Emniyet", "Konaklama"} <= set(tags)
 
 
+def _dated(published: str, *paragraphs: str) -> str:
+    page = detail_page("Hamit Otelden Öğretmenlere İndirim Anlaşması", *paragraphs)
+    meta = f'<meta property="article:published_time" content="{published}">'
+    return page.replace("<head>", "<head>" + meta)
+
+
+def test_old_undated_announcement_is_not_added():
+    page = _dated("2024-03-01T10:00:00+03:00", "Öğretmenlerimize özel %20 indirim uygulanmaktadır.")
+    _, res = run({LIST_URL: list_page("otel"), BASE + "otel/": page}, [])
+    assert not res.added and res.stale_skipped
+
+
+def test_recent_announcement_uses_published_date():
+    page = _dated("2026-08-10T10:00:00+03:00", "Öğretmenlerimize özel %20 indirim uygulanmaktadır.")
+    _, res = run({LIST_URL: list_page("otel"), BASE + "otel/": page}, [])
+    assert res.records[0]["tarih"] == "2026-08-10T00:00:00Z"
+
+
+def test_old_announcement_with_future_end_date_is_kept():
+    page = _dated(
+        "2024-03-01T10:00:00+03:00",
+        "Öğretmenlerimize özel %20 indirim uygulanmaktadır.",
+        "Kampanya 31.12.2026 tarihine kadar geçerlidir.",
+    )
+    _, res = run({LIST_URL: list_page("otel"), BASE + "otel/": page}, [])
+    assert len(res.added) == 1
+
+
+def test_existing_stale_record_is_removed():
+    fresh = _dated("2026-08-10T10:00:00+03:00", "Öğretmenlerimize özel %20 indirim uygulanmaktadır.")
+    _, res = run({LIST_URL: list_page("otel"), BASE + "otel/": fresh}, [])
+    old = _dated("2024-03-01T10:00:00+03:00", "Öğretmenlerimize özel %20 indirim uygulanmaktadır.")
+    _, res2 = run({LIST_URL: list_page("otel"), BASE + "otel/": old}, res.records, res.state)
+    assert res2.records == [] and len(res2.stale_removed) == 1 and res2.changed
+
+
+def test_url_date_is_used_as_published():
+    from collector.extract import parse_html_page
+
+    page = parse_html_page(b"<html><body><h1>X</h1></body></html>", "https://s.org.tr/2024/03/01/otel/")
+    assert page.published is not None and page.published.date().isoformat() == "2024-03-01"
+
+
 def test_one_failing_source_does_not_affect_others():
     from conftest import NOW
 

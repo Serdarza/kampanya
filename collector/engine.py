@@ -8,7 +8,7 @@ import logging
 import re
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from .classify import (
     AUDIENCES,
@@ -394,6 +394,8 @@ class RunResult:
     expired_skipped: list[str] = field(default_factory=list)
     duplicate_records_removed: list[dict] = field(default_factory=list)
     excluded_removed: list[dict] = field(default_factory=list)
+    stale_removed: list[dict] = field(default_factory=list)
+    stale_skipped: list[str] = field(default_factory=list)
     no_date: list[str] = field(default_factory=list)
     upcoming: list[str] = field(default_factory=list)
 
@@ -405,7 +407,16 @@ class RunResult:
             or self.expired_removed
             or self.duplicate_records_removed
             or self.excluded_removed
+            or self.stale_removed
         )
+
+
+STALE_AFTER = timedelta(days=365)
+
+
+def is_stale(c: Candidate, now: datetime) -> bool:
+    """Bitiş tarihi yazmayan ve bir yıldan uzun süre önce yayımlanmış duyuru."""
+    return c.dates.end is None and c.dates.published is not None and c.dates.published < now - STALE_AFTER
 
 
 def _facts_differ_from_record(c: Candidate, rec: dict) -> bool:
@@ -444,6 +455,7 @@ def merge(records: list[dict], state: dict, reports: list[SourceReport], now: da
     st = state.setdefault("records", {})
     res = RunResult(records, state)
     touched: set[int] = set()
+    stale_idx: set[int] = set()
     first_new = len(records)
 
     candidates = [c for rep in reports for c in rep.candidates]
@@ -466,6 +478,9 @@ def merge(records: list[dict], state: dict, reports: list[SourceReport], now: da
             if is_expired(c.dates.end, now):
                 res.expired_skipped.append(label)
                 continue
+            if is_stale(c, now):
+                res.stale_skipped.append(label)
+                continue
             rec = new_record(c, now)
             records.append(rec)
             touched.add(len(records) - 1)
@@ -480,8 +495,17 @@ def merge(records: list[dict], state: dict, reports: list[SourceReport], now: da
         touched.add(idx)
         rec = records[idx]
         key = record_key(rec)
+        if is_stale(c, now):
+            stale_idx.add(idx)
+            continue
         prev = st.get(key)
         fp = fingerprint(c)
+        if c.dates.published and str(rec.get("id", "")).startswith("auto-"):
+            pub = _date_only_z(c.dates.published)
+            if rec.get("tarih") != pub:
+                before, rec = rec, {**rec, "tarih": pub}
+                records[idx] = rec
+                res.updated.append((before, rec))
         if is_expired(c.dates.end, now):
             # Kaynak bitiş tarihini geçmiş gösteriyor → güncelleme yok, süre dolumu kaldırır.
             st[key] = _state_entry(c, now, fp, prev)
@@ -499,6 +523,9 @@ def merge(records: list[dict], state: dict, reports: list[SourceReport], now: da
             res.duplicates.append(label)
         st[key] = _state_entry(c, now, fp, prev)
 
+    res.stale_removed = [records[i] for i in sorted(stale_idx)]
+    records[:] = [r for i, r in enumerate(records) if i not in stale_idx]
+    first_new -= sum(1 for i in stale_idx if i < first_new)
     # Yeni kayıtlar listenin başına (uygulama zaten tarihe göre sıralar).
     records[:] = records[first_new:][::-1] + records[:first_new]
     _dedupe_existing(res)
