@@ -472,7 +472,7 @@
     },
     "id:auto-a805a32e6330": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "915cdbb9519e6cc8",
+      "fingerprint": "2b824e789081892a",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -668,37 +668,30 @@
     },
     "url:https://msb.gov.tr/personel/icerik/038e0b8e010449929160c8d21a2e15da": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "28a1712092e9af2e",
+      "fingerprint": "df75413d5688cf94",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
     },
     "url:https://msb.gov.tr/personel/icerik/1ceed6cebcda406bb4fbca1bb35c2d76": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "5e846ba2bfd7ebc3",
+      "fingerprint": "8861474da34f0c82",
       "start": null,
       "end": "2026-12-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
     },
     "url:https://msb.gov.tr/personel/icerik/a6a265c64aae43aebf8905e8ebf7dc4d": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "2928d3542df45ce8",
+      "fingerprint": "9e9398871f93a8aa",
       "start": null,
       "end": "2026-12-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
     },
-    "url:https://msb.gov.tr/personel/icerik/b2ffbd79107e4301b63f3dbd2dcec62f": {
-      "source": "msb-kurumsal-indirim",
-      "fingerprint": "50fe70dc52bc884f",
-      "start": null,
-      "end": null,
-      "firstSeen": "2026-09-27"
-    },
     "url:https://msb.gov.tr/personel/icerik/d0ba514a9e0945b5b5d627e196b8e22e": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "358e56b23bb39e61",
+      "fingerprint": "235d287da3ed448e",
       "start": null,
-      "end": null,
+      "end": "2026-12-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
     },
     "url:https://ogretmeniz.meb.gov.tr/kampanyalar-listesi/ds-damat": {
