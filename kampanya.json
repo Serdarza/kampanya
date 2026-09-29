@@ -1,6 +1,83 @@
 {
   "kampanyalar": [
     {
+      "id": "auto-ab842d23b3d8",
+      "baslik": "Türk Eğitim Sen & Diyetisyen Zeynep Aldanmaz arasında Protokol imzalandı.: Kurumsal İndirim – Türk Eğitim-Sen Üyelerine Özel",
+      "kurum": "Türk Eğitim-Sen",
+      "aciklama": "Türkiye Kamu-Sen ve Türk Eğitim-Sen Bursa Şubeleri ile “Diyetisyen Zeynep Aldanmaz Kliniği” arasında indirim anlaşması imzalanmıştır.",
+      "link": "https://www.turkegitimsen.org.tr/kampanyalar/turk-egitim-sen-diyetisyen-zeynep-aldanmaz-arasinda-protokol-imzalandi",
+      "tarih": "2026-09-29T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
+      "id": "auto-02f1c5a14f1d",
+      "baslik": "Türk Eğitim Sen & Akademik Koleji Arasında Protokol İmzalandı: %20 İndirim – Türk Eğitim-Sen Üyelerine Özel",
+      "kurum": "Türk Eğitim-Sen",
+      "aciklama": "AKADEMİK KOLEJİ İLE KURUMSAL İNDİRİM ANLAŞMASI YAPILDI. Türkiye Kamu-Sen Bursa Şubeleri ile Akademik Koleji arasında %20 indirim anlaşması imzalanmıştır. Yapılan anlaşma gereğince Türkiye Kamu-Sen Bursa Şubeleri üyeleri ve 1. derece yakınları indirimden yararlanabilecektir.",
+      "link": "https://www.turkegitimsen.org.tr/kampanyalar/turk-egitim-sen-akademik-koleji-arasinda-protokol-imzalandi",
+      "tarih": "2026-09-29T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
+      "id": "auto-fa05be6cbd9c",
+      "baslik": "Türk Eğitim Sen & Özlem Çalışkan Rehberlik ve Psikolojik Danışma Merkezi arasında protokol imzalandı.: %20 İndirim – Türk Eğitim-Sen Üyelerine Özel",
+      "kurum": "Türk Eğitim-Sen",
+      "aciklama": "Şubemiz ile Özlem Çalışkan Rehberlik ve Psikolojik Danışma Merkezi arasında %20 indirim anlaşması yapılmıştır.",
+      "link": "https://www.turkegitimsen.org.tr/kampanyalar/turk-egitim-sen-ozlem-caliskan-rehberlik-ve-psikolojik-danisma-merkezi-arasinda-protokol-imzalandi",
+      "tarih": "2026-09-29T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
+      "id": "auto-cb550c7e8046",
+      "baslik": "3200 Medya: %30 İndirim – Türk Eğitim-Sen Üyelerine Özel",
+      "kurum": "Türk Eğitim-Sen",
+      "aciklama": "DÜĞÜN, NİŞAN, DIŞ MEKAN, SÜNNET VE DİĞER ORGANİZASYON HİZMETLERİNDE %30 İNDİRİM.",
+      "link": "https://www.turkegitimsen.org.tr/kampanyalar/3200-medya",
+      "tarih": "2026-09-29T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
+      "id": "auto-655cbf0d7a3e",
+      "baslik": "Arzum Oltutaşı ve Gümüşçülük: %25 İndirim – Türk Eğitim-Sen Üyelerine Özel",
+      "kurum": "Türk Eğitim-Sen",
+      "aciklama": "OLTUTAŞI VE GÜMÜŞ ÜRÜNLERİNDE %25 İNDİRİM UYGULANACAKTIR.",
+      "link": "https://www.turkegitimsen.org.tr/kampanyalar/arzum-oltutasi-ve-gumusculuk",
+      "tarih": "2026-09-29T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
+      "id": "auto-ada265c53fde",
+      "baslik": "Güven Optik: %40'a Varan İndirim – Türk Eğitim-Sen Üyelerine Özel",
+      "kurum": "Türk Eğitim-Sen",
+      "aciklama": "GÖZLÜK VE GÜNEŞ GÖZLÜKLERİNDE %40. LENSLERDE %30. İNDİRİM ORANLARI, GÖZLÜK VE GÜNEŞ GÖZLÜKLERİNDE %40.",
+      "link": "https://www.turkegitimsen.org.tr/kampanyalar/guven-optik",
+      "tarih": "2026-09-29T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
+      "id": "auto-e01cf61f63fb",
+      "baslik": "Sımışka Kuruyemiş: %10 İndirim – Türk Eğitim-Sen Üyelerine Özel",
+      "kurum": "Türk Eğitim-Sen",
+      "aciklama": "KURUYEMİŞ, KURU MEYVE LOKUM VE HURMA ÜRÜNLERİNDE GEÇERLİDİR. İNDİRİM KURUYEMİŞ, KURU MEYVE LOKUM VE HURMA ÜRÜNLERİNDE GEÇERLİDİR.",
+      "link": "https://www.turkegitimsen.org.tr/kampanyalar/simiska-kuruyemis",
+      "tarih": "2026-09-29T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
       "id": "auto-a1f11ca236a2",
       "baslik": "24 Kasım Öğretmenler Günü'ne Özel Ufuk Üniversitesi Dr. Rıdvan Ege Hastanesi'nden Üyelerimize Kampanya!",
       "kurum": "Eğitim Gücü Sen",
