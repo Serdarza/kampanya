@@ -50,6 +50,13 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
+    "id:auto-1083ef4836ee": {
+      "source": "turkegitimsen-kampanyalar",
+      "fingerprint": "217b95fa2af810f1",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-10-01"
+    },
     "id:auto-114313a105ea": {
       "source": "istabip-arcelik-beko",
       "fingerprint": "43090a818f31e3a8",
@@ -595,6 +602,13 @@
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
+    },
+    "id:auto-d092df50b221": {
+      "source": "turkegitimsen-kampanyalar",
+      "fingerprint": "700e50f514f643c4",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-10-01"
     },
     "id:auto-d23a979ba5df": {
       "source": "skyes-polis",

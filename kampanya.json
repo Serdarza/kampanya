@@ -1,6 +1,28 @@
 {
   "kampanyalar": [
     {
+      "id": "auto-d092df50b221",
+      "baslik": "Nurbaba Lokantası: %10 İndirim – Türk Eğitim-Sen Üyelerine Özel",
+      "kurum": "Türk Eğitim-Sen",
+      "aciklama": "Türkiye Kamu-Sen Üyelerine tüm şubelerimizde özel indirim uygulanacaktır.",
+      "link": "https://www.turkegitimsen.org.tr/kampanyalar/nurbaba-lokantasi",
+      "tarih": "2026-10-01T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
+      "id": "auto-1083ef4836ee",
+      "baslik": "Ta-Ba Oto Lastik: Kurumsal İndirim – Türk Eğitim-Sen Üyelerine Özel",
+      "kurum": "Türk Eğitim-Sen",
+      "aciklama": "Özel Fiyat Alışveriş Yakutiye / Erzurum OTO LASTİK VE LASTİK OTELİ Oto Lastik ve Oto Lastik Oteli hizmetlerinde; 4 lastik değişimi ve Balans 700,00 TL 4 lastik sezonluk lastik oteli 700,00 TL",
+      "link": "https://www.turkegitimsen.org.tr/kampanyalar/ta-ba-oto-lastik",
+      "tarih": "2026-10-01T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
       "id": "auto-ab842d23b3d8",
       "baslik": "Türk Eğitim Sen & Diyetisyen Zeynep Aldanmaz arasında Protokol imzalandı.: Kurumsal İndirim – Türk Eğitim-Sen Üyelerine Özel",
       "kurum": "Türk Eğitim-Sen",
