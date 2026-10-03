@@ -1,6 +1,30 @@
 {
   "kampanyalar": [
     {
+      "id": "auto-503f66fd9feb",
+      "baslik": "Yılmaz Giyim İndirim Anlaşması – Emniyet Teşkilatı Sendikası Üyelerine Özel",
+      "kurum": "Emniyet Teşkilatı Sendikası",
+      "aciklama": "Emniyet Teşkilatı Sendikası ile Yılmaz Giyim arasında gerçekleştirilen iş birliği/anlaşma kapsamında: Emniyet Teşkilatı Sendikası üyeleri ile tüm Emniyet Teşkilatı personeli ve emekli Emniyet Teşkilatı personeli ile birinci derece yakınları: Yılmaz Giyim’de tüm kıyafetlerde %15 indirimden.",
+      "link": "https://emniyet.org.tr/anlasma/yilmaz-giyim-indirim-anlasmasi/",
+      "tarih": "2026-10-03T00:00:00Z",
+      "etiketler": [
+        "Emniyet",
+        "Emekli"
+      ]
+    },
+    {
+      "id": "auto-772cb1e25f9b",
+      "baslik": "Balabanoğlu İndirim Anlaşması – Emniyet Teşkilatı Sendikası Üyelerine Özel",
+      "kurum": "Emniyet Teşkilatı Sendikası",
+      "aciklama": "Emniyet Teşkilatı Sendikası ile Balabanoğlu arasında gerçekleştirilen anlaşma kapsamında: Emniyet Teşkilatı Sendikası üyelerine %15 indirim.",
+      "link": "https://emniyet.org.tr/anlasma/balabanoglu-indirim-anlasmasi/",
+      "tarih": "2026-10-03T00:00:00Z",
+      "etiketler": [
+        "Emniyet",
+        "Emekli"
+      ]
+    },
+    {
       "id": "auto-bc4a5d8f2698",
       "baslik": "Eğitim Gücü-Sen Üyelerine Özel A Life Sağlık Grubu İndirim Anlaşması",
       "kurum": "Eğitim Gücü Sen",
@@ -345,7 +369,7 @@
       "id": "auto-974f1e1b5101",
       "baslik": "Özel İmperial Hastanesi ve Hür-sen Arasında İndirim Anlaşması İmzalandı – Hürriyetçi Eğitim-Sen Üyelerine Özel",
       "kurum": "Hürriyetçi Eğitim-Sen",
-      "aciklama": "Özel İmperial Hastanesi ve Hürriyetçi Sendikalar Konfederasyonu arasında üyeler ve birinci derece yakınlarına yönelik indirim sözleşmesi imzalandı. ŞEHİT VE GAZİ YAKINI ÖĞRETMENLER RESEN ATAMADAN MUAF TUTULMALI, TALEP HALİNDE YAPILAN ATAMALAR İPTAL EDİLMELİDİR.",
+      "aciklama": "Özel İmperial Hastanesi ve Hürriyetçi Sendikalar Konfederasyonu arasında üyeler ve birinci derece yakınlarına yönelik indirim sözleşmesi imzalandı. ÇYDEM SÜRECİ ÖĞRETMENLER KURULUNDA GÖRÜŞÜLMELİ, KOMİSYON KARARIYLA YÜRÜTÜLMELİDİR.",
       "link": "https://hurriyetciegitimsen.org.tr/ozel-imperial-hastanesi-ve-hur-sen-arasinda-indirim-anlasmasi-imzalandi/",
       "tarih": "2026-01-23T00:00:00Z",
       "etiketler": [
@@ -367,7 +391,7 @@
       "id": "auto-119e44de89c4",
       "baslik": "HÜR-SEN Üyelerine Özel Digiturk Kampanyası",
       "kurum": "Hürriyetçi Eğitim-Sen",
-      "aciklama": "Bu kapsamda, VayCard Teknoloji aracılığıyla sağlanan özel anlaşma ile üyelerimize avantajlı internet ve dijital yayın paketleri sunulmaktadır. Kutu ve çanak kurulumu gerektirmeden Digiturk internet ve beIN Connect paketlerinden faydalanma imkânı. Ödüllü güncel film ve diziler, belgesel içerikleri ile limitsiz internet hizmeti tek pakette bir arada. Söz konusu kampanya, yalnızca HÜR-SEN üyelerine özel koşullar ve avantajlı fiyatlandırma ile sunulmaktadır. Detaylı bilgi ve başvuru süreci için ilgili kampanya sayfaları: ŞEHİT VE GAZİ YAKINI ÖĞRETMENLER RESEN ATAMADAN MUAF TUTULMALI, TALEP HALİNDE YAPILAN ATAMALAR İPTAL EDİLMELİDİR.",
+      "aciklama": "Bu kapsamda, VayCard Teknoloji aracılığıyla sağlanan özel anlaşma ile üyelerimize avantajlı internet ve dijital yayın paketleri sunulmaktadır. Kutu ve çanak kurulumu gerektirmeden Digiturk internet ve beIN Connect paketlerinden faydalanma imkânı. Ödüllü güncel film ve diziler, belgesel içerikleri ile limitsiz internet hizmeti tek pakette bir arada. Söz konusu kampanya, yalnızca HÜR-SEN üyelerine özel koşullar ve avantajlı fiyatlandırma ile sunulmaktadır. Detaylı bilgi ve başvuru süreci için ilgili kampanya sayfaları: ÇYDEM SÜRECİ ÖĞRETMENLER KURULUNDA GÖRÜŞÜLMELİ, KOMİSYON KARARIYLA YÜRÜTÜLMELİDİR.",
       "link": "https://hurriyetciegitimsen.org.tr/hur-sen-uyelerine-ozel-digiturk-kampanyasi/",
       "tarih": "2026-02-24T00:00:00Z",
       "etiketler": [
@@ -378,7 +402,7 @@
       "id": "auto-3445e6da6aa0",
       "baslik": "HÜR-SEN Üyelerine Özel D-Smart Ayrıcalıkları",
       "kurum": "Hürriyetçi Eğitim-Sen",
-      "aciklama": "Bu kapsamda, Vaycard Teknoloji aracılığıyla gerçekleştirilen anlaşma doğrultusunda HÜR-SEN üyelerine özel D-Smart TV ve internet paketleri avantajlı koşullarla sunulmaktadır. Zengin içerik seçenekleriyle TV keyfi sunan Mega Paket kapsamında, D-Smart GO erişimi kampanya dahilinde hediye edilmektedir. Söz konusu kampanyalar, yalnızca HÜR-SEN üyelerine özel şartlar çerçevesinde geçerlidir. Detaylı bilgi ve başvuru süreci için kampanya sayfaları: ŞEHİT VE GAZİ YAKINI ÖĞRETMENLER RESEN ATAMADAN MUAF TUTULMALI, TALEP HALİNDE YAPILAN ATAMALAR İPTAL EDİLMELİDİR.",
+      "aciklama": "Bu kapsamda, Vaycard Teknoloji aracılığıyla gerçekleştirilen anlaşma doğrultusunda HÜR-SEN üyelerine özel D-Smart TV ve internet paketleri avantajlı koşullarla sunulmaktadır. Zengin içerik seçenekleriyle TV keyfi sunan Mega Paket kapsamında, D-Smart GO erişimi kampanya dahilinde hediye edilmektedir. Söz konusu kampanyalar, yalnızca HÜR-SEN üyelerine özel şartlar çerçevesinde geçerlidir. Detaylı bilgi ve başvuru süreci için kampanya sayfaları: ÇYDEM SÜRECİ ÖĞRETMENLER KURULUNDA GÖRÜŞÜLMELİ, KOMİSYON KARARIYLA YÜRÜTÜLMELİDİR.",
       "link": "https://hurriyetciegitimsen.org.tr/hur-sen-uyelerine-ozel-d-smart-ayricaliklari/",
       "tarih": "2026-02-24T00:00:00Z",
       "etiketler": [
@@ -389,7 +413,7 @@
       "id": "auto-f6e0392cbdb5",
       "baslik": "Konfederasyonumuz İle Osmaniye Özel Sevgi Hastanesi Arasında %20 İndirim Anlaşması – Hürriyetçi Eğitim-Sen Üyelerine Özel",
       "kurum": "Hürriyetçi Eğitim-Sen",
-      "aciklama": "Osmaniye – Özel Sevgi Hastanesi ile Hür Sen Konfederasyonumuzun üyelerini kapsayan %20 indirim anlaşması imzalanmıştır. Anlaşmamız bir yıllık süreyi (31.12.2026 ) kapsamaktadır. ŞEHİT VE GAZİ YAKINI ÖĞRETMENLER RESEN ATAMADAN MUAF TUTULMALI, TALEP HALİNDE YAPILAN ATAMALAR İPTAL EDİLMELİDİR.",
+      "aciklama": "Osmaniye – Özel Sevgi Hastanesi ile Hür Sen Konfederasyonumuzun üyelerini kapsayan %20 indirim anlaşması imzalanmıştır. Anlaşmamız bir yıllık süreyi (31.12.2026 ) kapsamaktadır. ÇYDEM SÜRECİ ÖĞRETMENLER KURULUNDA GÖRÜŞÜLMELİ, KOMİSYON KARARIYLA YÜRÜTÜLMELİDİR.",
       "link": "https://hurriyetciegitimsen.org.tr/konfederasyonumuz-ile-osmaniye-ozel-sevgi-hastanesi-arasinda-%20-indirim-anlasmasi/",
       "tarih": "2026-03-27T00:00:00Z",
       "etiketler": [
@@ -400,7 +424,7 @@
       "id": "auto-a49c7aab0840",
       "baslik": "Özel İntergen Genetik Hastalıklar Değerlendirme Merkezi ile Protokol İmzaladık: %15 İndirim – Hürriyetçi Eğitim-Sen Üyelerine Özel",
       "kurum": "Hürriyetçi Eğitim-Sen",
-      "aciklama": "Sendikamız ile Özel İntergen Genetik Hastalıklar Değerlendirme Merkezi arasında protokol imzalanmıştır. Protokol kapsamında genetik testlerde %15 indirim uygulanacaktır. Özel İntergen Genetik Hastalıklar Değerlendirme Merkezi, 1999 yılında Prof. ŞEHİT VE GAZİ YAKINI ÖĞRETMENLER RESEN ATAMADAN MUAF TUTULMALI, TALEP HALİNDE YAPILAN ATAMALAR İPTAL EDİLMELİDİR.",
+      "aciklama": "Sendikamız ile Özel İntergen Genetik Hastalıklar Değerlendirme Merkezi arasında protokol imzalanmıştır. Protokol kapsamında genetik testlerde %15 indirim uygulanacaktır. Özel İntergen Genetik Hastalıklar Değerlendirme Merkezi, 1999 yılında Prof. ÇYDEM SÜRECİ ÖĞRETMENLER KURULUNDA GÖRÜŞÜLMELİ, KOMİSYON KARARIYLA YÜRÜTÜLMELİDİR.",
       "link": "https://hurriyetciegitimsen.org.tr/ozel-intergen-genetik-hastaliklar-degerlendirme-merkezi-ile-protokol-imzaladik/",
       "tarih": "2026-06-16T00:00:00Z",
       "etiketler": [
@@ -411,7 +435,7 @@
       "id": "auto-97c10a2da593",
       "baslik": "Hür Sen Üyelerine Gürkent Hotel’de Özel İndirim!",
       "kurum": "Hürriyetçi Eğitim-Sen",
-      "aciklama": "Konfederasyonumuz, üyelerimize ve ailelerine ekonomik avantaj sağlamak amacıyla Ankara’daki Gürkent Hotel ile özel konaklama anlaşması gerçekleştirdi. Anlaşma kapsamında kahvaltı ve KDV dâhil olmak üzere tek kişilik standart oda gecelik 2.000 TL, çift kişilik standart oda ise gecelik 3.000 TL olarak uygulanacak. Özel fiyatlar 1 Temmuz 2026–31 Aralık 2026 tarihleri arasında geçerli olacak. Böylece Hür Sen’e bağlı sendikaların üyeleri ve birinci derece yakınları, Ankara seyahatlerinde yıl sonuna kadar avantajlı fiyatlarla konaklama imkânından yararlanabilecek. ŞEHİT VE GAZİ YAKINI ÖĞRETMENLER RESEN ATAMADAN MUAF TUTULMALI, TALEP HALİNDE YAPILAN ATAMALAR İPTAL EDİLMELİDİR. Kampanya 31.12.2026 tarihine kadar geçerlidir.",
+      "aciklama": "Konfederasyonumuz, üyelerimize ve ailelerine ekonomik avantaj sağlamak amacıyla Ankara’daki Gürkent Hotel ile özel konaklama anlaşması gerçekleştirdi. Anlaşma kapsamında kahvaltı ve KDV dâhil olmak üzere tek kişilik standart oda gecelik 2.000 TL, çift kişilik standart oda ise gecelik 3.000 TL olarak uygulanacak. Özel fiyatlar 1 Temmuz 2026–31 Aralık 2026 tarihleri arasında geçerli olacak. Böylece Hür Sen’e bağlı sendikaların üyeleri ve birinci derece yakınları, Ankara seyahatlerinde yıl sonuna kadar avantajlı fiyatlarla konaklama imkânından yararlanabilecek. ÇYDEM SÜRECİ ÖĞRETMENLER KURULUNDA GÖRÜŞÜLMELİ, KOMİSYON KARARIYLA YÜRÜTÜLMELİDİR. Kampanya 31.12.2026 tarihine kadar geçerlidir.",
       "link": "https://hurriyetciegitimsen.org.tr/hur-sen-uyelerine-gurkent-hotelde-ozel-indirim/",
       "tarih": "2026-07-13T00:00:00Z",
       "etiketler": [
@@ -422,7 +446,7 @@
       "id": "auto-94fab9eb684f",
       "baslik": "Hür-Sen Konfederasyonumuz ile Hattuşa Vacation Thermal Oteller Zinciri İle %20 İndirim Anlaşması – Hürriyetçi Eğitim-Sen Üyelerine Özel",
       "kurum": "Hürriyetçi Eğitim-Sen",
-      "aciklama": "Hattuşa Vacation Thermal Oteller ile yapmış olduğumuz %20 indirim anlaşması ile Konfederasyonumuza bağlı tüm sendikalarımızın üyeleri ve birinci derece aile takımları tatil ve konaklama hizmetlerinden indirimli faydalanacaklar. Ülke genelinde toplamda 7 ayrı ilde termal tesisi bulunan Hattuşa’nın şu an aktif olan Ankara Ayaş, Hatay Erzin, Balıkesir Kazdağları ve Tekirdağ Saray termal otellerinde indirimli tatil keyfi bugün itibariyle başlamıştır. Diğer tesisler tamamlandıkça anlaşma kapsamına dahil edilecektir. ŞEHİT VE GAZİ YAKINI ÖĞRETMENLER RESEN ATAMADAN MUAF TUTULMALI, TALEP HALİNDE YAPILAN ATAMALAR İPTAL EDİLMELİDİR.",
+      "aciklama": "Hattuşa Vacation Thermal Oteller ile yapmış olduğumuz %20 indirim anlaşması ile Konfederasyonumuza bağlı tüm sendikalarımızın üyeleri ve birinci derece aile takımları tatil ve konaklama hizmetlerinden indirimli faydalanacaklar. Ülke genelinde toplamda 7 ayrı ilde termal tesisi bulunan Hattuşa’nın şu an aktif olan Ankara Ayaş, Hatay Erzin, Balıkesir Kazdağları ve Tekirdağ Saray termal otellerinde indirimli tatil keyfi bugün itibariyle başlamıştır. Diğer tesisler tamamlandıkça anlaşma kapsamına dahil edilecektir. ÇYDEM SÜRECİ ÖĞRETMENLER KURULUNDA GÖRÜŞÜLMELİ, KOMİSYON KARARIYLA YÜRÜTÜLMELİDİR.",
       "link": "https://hurriyetciegitimsen.org.tr/hur-sen-konfederasyonumuz-ile-hattusa-vacation-thermal-oteller-zinciri-ile-%20-indirim-anlasmasi/",
       "tarih": "2026-07-22T00:00:00Z",
       "etiketler": [
@@ -455,7 +479,7 @@
       "id": "auto-30b05eea9433",
       "baslik": "Hür-sen Üyeleri ve Birinci Derece Yakınları İçin Özel Diş Sağlığı İndirimi Anlaşması Yapılmıştır",
       "kurum": "Hürriyetçi Eğitim-Sen",
-      "aciklama": "HÜR-SEN Konfederasyonu ile İstanbul’da yer alan Esnan Ağız ve Diş Sağlığı Merkezleri arasında yapılan anlaşma kapsamında üyelerimiz ve birinci derece yakınları tüm tedavilerde özel indirimlerden yararlanabilecektir. Skyland şubesinde %50 indirim. Diğer tüm şubelerde %45 indirim. Belirtilen indirim oranları liste fiyatları üzerinden uygulanacaktır. ŞEHİT VE GAZİ YAKINI ÖĞRETMENLER RESEN ATAMADAN MUAF TUTULMALI, TALEP HALİNDE YAPILAN ATAMALAR İPTAL EDİLMELİDİR.",
+      "aciklama": "HÜR-SEN Konfederasyonu ile İstanbul’da yer alan Esnan Ağız ve Diş Sağlığı Merkezleri arasında yapılan anlaşma kapsamında üyelerimiz ve birinci derece yakınları tüm tedavilerde özel indirimlerden yararlanabilecektir. Skyland şubesinde %50 indirim. Diğer tüm şubelerde %45 indirim. Belirtilen indirim oranları liste fiyatları üzerinden uygulanacaktır. ÇYDEM SÜRECİ ÖĞRETMENLER KURULUNDA GÖRÜŞÜLMELİ, KOMİSYON KARARIYLA YÜRÜTÜLMELİDİR.",
       "link": "https://hurriyetciegitimsen.org.tr/hur-sen-uyeleri-ve-birinci-derece-yakinlari-icin-ozel-dis-sagligi-indirimi-anlasmasi-yapilmistir/",
       "tarih": "2026-09-25T00:00:00Z",
       "etiketler": [
