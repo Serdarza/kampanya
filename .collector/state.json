@@ -162,6 +162,13 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
+    "id:auto-3131015ff308": {
+      "source": "meb-ogretmeniz",
+      "fingerprint": "e93a45b5abf7ee11",
+      "start": null,
+      "end": "2027-12-31T23:59:59+03:00",
+      "firstSeen": "2026-10-12"
+    },
     "id:auto-33018c8452d2": {
       "source": "kamusen-konfederasyon-anlasmalari",
       "fingerprint": "eca4c12c7dd67468",

@@ -1,6 +1,17 @@
 {
   "kampanyalar": [
     {
+      "id": "auto-3131015ff308",
+      "baslik": "Megadentist Ağız ve Diş Sağlığı Polikliniği: Öğretmenlere Özel %60'a Varan İndirim",
+      "kurum": "Millî Eğitim Bakanlığı",
+      "aciklama": "Kampanya; yurt içinde ve yurt dışında resmî okul ve kurumlarda görev yapan öğretmenler ile Millî Eğitim Bakanlığının merkez, taşra ve yurt dışı teşkilatında görev yapan idari personel ve bunların birinci ve ikinci derece yakınlarını kapsamaktadır. Kampanya, Millî Eğitim Bakanlığı ile Megadentist Ağız ve Diş Poliklinikleri arasında imzalanan İş Birliği Protokolü kapsamında, protokolün geçerlilik süresi boyunca uygulanacaktır. Kampanya, 31.12.2027. TDB Türk Diş Hekimleri Birliği Güncel Fiyat Tarifesinden: Panoramik Film ÜCRETSİZ (Film alınmak istenirse ücrete tabidir.) İmplant Tedavileri % 20 indirim. Ortodonti Tedavileri %20 indirim. Diş Taşı Temizliği % 60 indirim.",
+      "link": "https://ogretmeniz.meb.gov.tr/kampanyalar-listesi/megadentist-agiz-ve-dis-sagligi-poliklinigi/",
+      "tarih": "2026-10-12T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
       "id": "auto-503f66fd9feb",
       "baslik": "Yılmaz Giyim İndirim Anlaşması – Emniyet Teşkilatı Sendikası Üyelerine Özel",
       "kurum": "Emniyet Teşkilatı Sendikası",
