@@ -1,5 +1,5 @@
 {
-  "$comment": "Resmi kampanya kaynakları. Yeni kaynak eklemek için 'sources' dizisine bir nesne ekleyin; kod değişikliği gerekmez. type: html_list (liste + detay sayfaları, linkPattern zorunlu) | html_page (tek kampanya sayfası) | rss | json_api (itemsPath + fields) | pdf. audienceFromSource=true: sayfadaki her kampanya 'audiences' kitlesine yöneliktir (ör. MEB öğretmen kampanya listesi); false ise her kayıt metninden ayrıca kamu personeline özel olduğu doğrulanır. Yalnızca kurumun/markanın/sendikanın kendi resmi sitesi eklenmelidir; haber, blog, forum ve kampanya toplayıcı siteler eklenmez. Geçici olarak devre dışı bırakmak için active=false.",
+  "$comment": "Resmi kampanya kaynakları. Yeni kaynak eklemek için 'sources' dizisine bir nesne ekleyin; kod değişikliği gerekmez. type: html_list (liste + detay sayfaları, linkPattern zorunlu) | html_page (tek kampanya sayfası) | rss | json_api (itemsPath + fields) | pdf. html_list için loadMoreUrl (zorunlu {skip}) 'Daha Fazla Göster' HTML parçasını sayfalar; loadMorePageSize varsayılan 6. audienceFromSource=true: sayfadaki her kampanya 'audiences' kitlesine yöneliktir (ör. MEB öğretmen kampanya listesi); false ise her kayıt metninden ayrıca kamu personeline özel olduğu doğrulanır. Yalnızca kurumun/markanın/sendikanın kendi resmi sitesi eklenmelidir; haber, blog, forum ve kampanya toplayıcı siteler eklenmez. Geçici olarak devre dışı bırakmak için active=false.",
   "defaults": {
     "active": true,
     "maxItems": 60,
@@ -29,6 +29,8 @@
       "url": "https://www.msb.gov.tr/KurumsalIndirimUygulamalari",
       "type": "html_list",
       "linkPattern": "^https://www\\.msb\\.gov\\.tr/Personel/icerik/[0-9a-f]{32}$",
+      "loadMoreUrl": "/Anasayfa/IndirimUygulamalariLoadMore?skip={skip}&search=",
+      "loadMorePageSize": 6,
       "titleSelector": ".yan-sayfa-title h3",
       "organizationFromTitle": true,
       "followPdfs": true,

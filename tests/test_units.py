@@ -99,6 +99,52 @@ def test_sources_file_is_valid():
     assert all(s.url.startswith("https://") for s in sources)
 
 
+def test_load_more_state_reads_button():
+    from collector.extract import load_more_state
+
+    html = b'<button id="loadMoreBtn" data-total="20" data-skip="6">Daha Fazla Goster</button>'
+    assert load_more_state(html) == (6, 20)
+    assert load_more_state(b"<html><body>yok</body></html>") == (None, None)
+
+
+def test_load_more_url_config(tmp_path):
+    p = tmp_path / "s.json"
+    ok = {
+        "sources": [
+            {
+                "id": "msb-list",
+                "url": "https://www.msb.gov.tr/liste",
+                "type": "html_list",
+                "linkPattern": "^https://www\\.msb\\.gov\\.tr/x/[0-9a-f]+$",
+                "loadMoreUrl": "/Anasayfa/IndirimUygulamalariLoadMore?skip={skip}&search=",
+            }
+        ]
+    }
+    p.write_text(json.dumps(ok), "utf-8")
+    src = load_sources(p)[0]
+    assert src.load_more_url == "https://www.msb.gov.tr/Anasayfa/IndirimUygulamalariLoadMore?skip={skip}&search="
+    assert src.load_more_page_size == 6
+
+    p.write_text(
+        json.dumps(
+            {
+                "sources": [
+                    {
+                        "id": "msb-list",
+                        "url": "https://www.msb.gov.tr/liste",
+                        "type": "html_list",
+                        "linkPattern": "^https://www\\.msb\\.gov\\.tr/x$",
+                        "loadMoreUrl": "/load-more",
+                    }
+                ]
+            }
+        ),
+        "utf-8",
+    )
+    with pytest.raises(ConfigError, match="skip"):
+        load_sources(p)
+
+
 def test_bad_source_config_rejected(tmp_path):
     p = tmp_path / "s.json"
     p.write_text(json.dumps({"sources": [{"id": "x1", "url": "https://a.gov.tr", "type": "shell"}]}), "utf-8")

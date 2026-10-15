@@ -79,6 +79,24 @@ def list_links(content: bytes, base_url: str, pattern: str) -> list[tuple[str, s
     return out
 
 
+def load_more_state(content: bytes) -> tuple[int | None, int | None]:
+    """#loadMoreBtn üzerindeki data-skip / data-total (yoksa (None, None))."""
+    btn = soup_of(content).find(id="loadMoreBtn")
+    if btn is None:
+        return None, None
+
+    def _int(name: str) -> int | None:
+        raw = btn.get(name)
+        if raw is None:
+            return None
+        try:
+            return int(raw)
+        except (TypeError, ValueError):
+            return None
+
+    return _int("data-skip"), _int("data-total")
+
+
 def _clean_title(t: str) -> str:
     t = clean_ws(t)
     t = _SITE_SUFFIX.sub("", t)

@@ -246,6 +246,45 @@ def test_url_date_is_used_as_published():
     assert page.published is not None and page.published.date().isoformat() == "2024-03-01"
 
 
+def test_html_list_follows_load_more_fragments():
+    more_url = "https://kampanya.example.gov.tr/load-more?skip={skip}"
+    first = list_page("bir").replace(
+        "</body>",
+        '<button id="loadMoreBtn" data-skip="1" data-total="3">Daha Fazla Goster</button></body>',
+    )
+    pages = {
+        LIST_URL: first,
+        "https://kampanya.example.gov.tr/load-more?skip=1": list_page("iki"),
+        "https://kampanya.example.gov.tr/load-more?skip=2": list_page("uc"),
+        BASE + "bir/": TEACHER_OFFER,
+        BASE + "iki/": TEACHER_OFFER.replace("Örnek Optik", "İkinci Optik"),
+        BASE + "uc/": TEACHER_OFFER.replace("Örnek Optik", "Üçüncü Optik"),
+    }
+    src = make_source(load_more_url=more_url, load_more_page_size=1)
+    fetcher = FakeFetcher(pages)
+    rep = scan_source(src, fetcher)
+    assert rep.status == "ok"
+    assert {c.link for c in rep.candidates} == {BASE + "bir/", BASE + "iki/", BASE + "uc/"}
+    assert fetcher.calls.count("https://kampanya.example.gov.tr/load-more?skip=1") == 1
+    assert fetcher.calls.count("https://kampanya.example.gov.tr/load-more?skip=2") == 1
+    assert "https://kampanya.example.gov.tr/load-more?skip=3" not in fetcher.calls
+
+
+def test_html_list_keeps_first_page_if_load_more_fails():
+    more_url = "https://kampanya.example.gov.tr/load-more?skip={skip}"
+    first = list_page("bir").replace(
+        "</body>",
+        '<button id="loadMoreBtn" data-skip="1" data-total="2">Daha</button></body>',
+    )
+    pages = {LIST_URL: first, BASE + "bir/": TEACHER_OFFER}
+    src = make_source(load_more_url=more_url, load_more_page_size=1)
+    fetcher = FakeFetcher(pages)
+    rep = scan_source(src, fetcher)
+    assert rep.status == "ok"
+    assert [c.link for c in rep.candidates] == [BASE + "bir/"]
+    assert any("load-more" in e for e in rep.item_errors)
+
+
 def test_one_failing_source_does_not_affect_others():
     from conftest import NOW
 

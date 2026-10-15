@@ -7,7 +7,7 @@ import json
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urljoin, urlsplit
 
 from .classify import AUDIENCES, CATEGORY_LABELS
 
@@ -44,6 +44,9 @@ class Source:
     title: str | None = None
     # Başlıkta kitle geçmiyorsa eklenecek sabit ek (ör. "HTKSEN Üyelerine Özel").
     title_suffix: str | None = None
+    # html_list: "Daha Fazla Göster" HTML parçası. {skip} zorunlu (ör. ?skip={skip}).
+    load_more_url: str | None = None
+    load_more_page_size: int = 6
 
     @property
     def hosts(self) -> set[str]:
@@ -105,6 +108,8 @@ def _source_from_dict(raw: dict, defaults: dict) -> Source:
     allowed = [str(h).lower() for h in d.get("allowedHosts") or []]
     for h in allowed:
         validate_public_url(f"https://{h}/")
+    load_more_url = _load_more_url(sid, stype, url, d.get("loadMoreUrl"), allowed)
+    page_size = max(1, min(int(d.get("loadMorePageSize", 6)), 50))
     return Source(
         id=sid,
         name=str(d.get("name") or sid),
@@ -126,7 +131,25 @@ def _source_from_dict(raw: dict, defaults: dict) -> Source:
         json_fields=dict(d.get("fields") or {}),
         title=str(d["title"]).strip() if d.get("title") and stype == "html_page" else None,
         title_suffix=str(d["titleSuffix"]).strip() if d.get("titleSuffix") else None,
+        load_more_url=load_more_url,
+        load_more_page_size=page_size,
     )
+
+
+def _load_more_url(sid: str, stype: str, source_url: str, raw: object, allowed_hosts: list[str]) -> str | None:
+    if not raw:
+        return None
+    if stype != "html_list":
+        raise ConfigError(f"{sid}: loadMoreUrl is only valid for html_list")
+    joined = urljoin(source_url, str(raw).strip())
+    if "{skip}" not in joined:
+        raise ConfigError(f"{sid}: loadMoreUrl must contain {{skip}}")
+    validate_public_url(joined.replace("{skip}", "0"))
+    host = _host(joined)
+    trusted = {_host(source_url), *allowed_hosts}
+    if host not in trusted:
+        raise ConfigError(f"{sid}: loadMoreUrl host {host} not in allowed hosts")
+    return joined
 
 
 def load_sources(path: Path) -> list[Source]:

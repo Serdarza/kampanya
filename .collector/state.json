@@ -99,6 +99,13 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
+    "id:auto-1decc6c18c78": {
+      "source": "msb-kurumsal-indirim",
+      "fingerprint": "50fe70dc52bc884f",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-10-16"
+    },
     "id:auto-20ed57c0b4a2": {
       "source": "kamusen-konfederasyon-anlasmalari",
       "fingerprint": "b6dce7009825ee26",
@@ -225,6 +232,13 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
+    "id:auto-46bcc3c9a7cc": {
+      "source": "msb-kurumsal-indirim",
+      "fingerprint": "aabd2f627bdb77b3",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-10-16"
+    },
     "id:auto-4934538c6269": {
       "source": "emniyet-sendikasi-anlasmalar",
       "fingerprint": "5ae85ce56d5f2831",
@@ -287,6 +301,13 @@
       "start": null,
       "end": "2027-01-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
+    },
+    "id:auto-5bee4975f97d": {
+      "source": "msb-kurumsal-indirim",
+      "fingerprint": "5edf2a7cb662b4a3",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-10-16"
     },
     "id:auto-5c3071958711": {
       "source": "kamusen-konfederasyon-anlasmalari",
@@ -521,7 +542,7 @@
     },
     "id:auto-a805a32e6330": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "2b824e789081892a",
+      "fingerprint": "915cdbb9519e6cc8",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -554,12 +575,33 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
+    "id:auto-b3a9ee42f404": {
+      "source": "msb-kurumsal-indirim",
+      "fingerprint": "6c92070c12e71e79",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-10-16"
+    },
+    "id:auto-b52bc47dfd68": {
+      "source": "msb-kurumsal-indirim",
+      "fingerprint": "6a61a52c317a47e0",
+      "start": "2026-09-03T00:00:00+03:00",
+      "end": "2026-10-31T23:59:59+03:00",
+      "firstSeen": "2026-10-16"
+    },
     "id:auto-b5389371d509": {
       "source": "oyak-indirimli-satis",
       "fingerprint": "11d05735a94dcd33",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
+    },
+    "id:auto-b5e6599aecf5": {
+      "source": "msb-kurumsal-indirim",
+      "fingerprint": "dd72caa7ada106dc",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-10-16"
     },
     "id:auto-bc4a5d8f2698": {
       "source": "egitimgucusen-kurumsal-anlasmalar",
@@ -729,6 +771,13 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
+    "id:auto-f89142030097": {
+      "source": "msb-kurumsal-indirim",
+      "fingerprint": "fd62a1f552491518",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-10-16"
+    },
     "id:auto-fa05be6cbd9c": {
       "source": "turkegitimsen-kampanyalar",
       "fingerprint": "8f53a8cd412a6b69",
@@ -766,30 +815,37 @@
     },
     "url:https://msb.gov.tr/personel/icerik/038e0b8e010449929160c8d21a2e15da": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "df75413d5688cf94",
+      "fingerprint": "28a1712092e9af2e",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
     },
     "url:https://msb.gov.tr/personel/icerik/1ceed6cebcda406bb4fbca1bb35c2d76": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "286462b85a4c6307",
+      "fingerprint": "7bd9dd30461fbbf2",
       "start": null,
       "end": "2026-12-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
     },
+    "url:https://msb.gov.tr/personel/icerik/47628f41038f498e9edf995a376bdc07": {
+      "source": "msb-kurumsal-indirim",
+      "fingerprint": "7f716030957d5f74",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-10-16"
+    },
     "url:https://msb.gov.tr/personel/icerik/a6a265c64aae43aebf8905e8ebf7dc4d": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "9e9398871f93a8aa",
+      "fingerprint": "2928d3542df45ce8",
       "start": null,
       "end": "2026-12-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
     },
     "url:https://msb.gov.tr/personel/icerik/d0ba514a9e0945b5b5d627e196b8e22e": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "235d287da3ed448e",
+      "fingerprint": "358e56b23bb39e61",
       "start": null,
-      "end": "2026-12-31T23:59:59+03:00",
+      "end": null,
       "firstSeen": "2026-09-27"
     },
     "url:https://ogretmeniz.meb.gov.tr/kampanyalar-listesi/ds-damat": {

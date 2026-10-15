@@ -24,6 +24,7 @@ from .extract import (
     Page,
     discounts,
     list_links,
+    load_more_state,
     parse_html_page,
     parse_json_api,
     parse_rss,
@@ -146,6 +147,46 @@ def _page_candidate(src: Source, fetcher: Fetcher, url: str, rep: SourceReport, 
     _make_candidate(src, title, text, url, rep, extra)
 
 
+_LOAD_MORE_MAX_PAGES = 40
+
+
+def _html_list_links(src: Source, fetcher: Fetcher, first: FetchResult, rep: SourceReport) -> list[tuple[str, str]]:
+    """İlk liste sayfası + isteğe bağlı skip tabanlı 'Daha Fazla Göster' HTML parçaları."""
+    pattern = src.link_pattern or ""
+    links = list_links(first.content, src.url, pattern)
+    if not src.load_more_url:
+        return links
+    skip, total = load_more_state(first.content)
+    page_size = src.load_more_page_size
+    if not links:
+        skip = 0
+    elif skip is None:
+        skip = page_size
+    seen = {normalize_url(u) for u, _ in links}
+    pages = 0
+    while pages < _LOAD_MORE_MAX_PAGES:
+        if total is not None and skip >= total:
+            break
+        if len(links) >= src.max_items:
+            break
+        url = src.load_more_url.replace("{skip}", str(skip))
+        res = fetcher.get(url, src.hosts)
+        if not res.ok:
+            rep.item_errors.append(f"{url}: {res.error_kind}: {res.error}")
+            break
+        extra = [(u, t) for u, t in list_links(res.content, src.url, pattern) if normalize_url(u) not in seen]
+        if not extra:
+            break
+        for url_, title in extra:
+            seen.add(normalize_url(url_))
+            links.append((url_, title))
+        skip += page_size
+        pages += 1
+    if pages:
+        log.info("%s: load-more pages=%d list_links=%d", src.id, pages, len(links))
+    return links
+
+
 def scan_source(src: Source, fetcher: Fetcher) -> SourceReport:
     rep = SourceReport(src)
     try:
@@ -163,7 +204,7 @@ def scan_source(src: Source, fetcher: Fetcher) -> SourceReport:
             return _fail(rep, res)
 
         if src.type == "html_list":
-            links = list_links(res.content, src.url, src.link_pattern or "")
+            links = _html_list_links(src, fetcher, res, rep)
             if not links:
                 rep.status = "parse_failed"
                 rep.error = "no links matched linkPattern (page structure may have changed)"
