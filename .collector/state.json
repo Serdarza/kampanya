@@ -99,13 +99,6 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
-    "id:auto-1decc6c18c78": {
-      "source": "msb-kurumsal-indirim",
-      "fingerprint": "50fe70dc52bc884f",
-      "start": null,
-      "end": null,
-      "firstSeen": "2026-10-16"
-    },
     "id:auto-20ed57c0b4a2": {
       "source": "kamusen-konfederasyon-anlasmalari",
       "fingerprint": "b6dce7009825ee26",
@@ -542,7 +535,7 @@
     },
     "id:auto-a805a32e6330": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "915cdbb9519e6cc8",
+      "fingerprint": "2b824e789081892a",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -577,7 +570,7 @@
     },
     "id:auto-b3a9ee42f404": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "6c92070c12e71e79",
+      "fingerprint": "3a57ecf21ba334c7",
       "start": null,
       "end": null,
       "firstSeen": "2026-10-16"
@@ -815,14 +808,14 @@
     },
     "url:https://msb.gov.tr/personel/icerik/038e0b8e010449929160c8d21a2e15da": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "28a1712092e9af2e",
+      "fingerprint": "f8feab8fdcc7b88d",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
     },
     "url:https://msb.gov.tr/personel/icerik/1ceed6cebcda406bb4fbca1bb35c2d76": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "7bd9dd30461fbbf2",
+      "fingerprint": "286462b85a4c6307",
       "start": null,
       "end": "2026-12-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
@@ -836,16 +829,16 @@
     },
     "url:https://msb.gov.tr/personel/icerik/a6a265c64aae43aebf8905e8ebf7dc4d": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "2928d3542df45ce8",
+      "fingerprint": "9e9398871f93a8aa",
       "start": null,
       "end": "2026-12-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
     },
     "url:https://msb.gov.tr/personel/icerik/d0ba514a9e0945b5b5d627e196b8e22e": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "358e56b23bb39e61",
+      "fingerprint": "235d287da3ed448e",
       "start": null,
-      "end": null,
+      "end": "2026-12-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
     },
     "url:https://ogretmeniz.meb.gov.tr/kampanyalar-listesi/ds-damat": {
