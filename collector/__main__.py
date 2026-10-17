@@ -13,6 +13,7 @@ from .config import ConfigError, load_sources
 from .dates import now_tr
 from .engine import RunResult, SourceReport, merge, scan_all
 from .fetch import Fetcher
+from .notify import LEDGER_PATH, load_ledger, record_scan, save_ledger
 from .store import dump_json, load_campaigns, load_state, record_title, save_campaigns, save_state
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -104,6 +105,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--data", type=Path, default=ROOT / "kampanya.json")
     ap.add_argument("--state", type=Path, default=ROOT / ".collector" / "state.json")
     ap.add_argument("--report", type=Path, default=ROOT / "reports" / "last-run.json")
+    ap.add_argument("--notifications", type=Path, default=LEDGER_PATH, help="bildirim defteri")
     ap.add_argument("--dry-run", action="store_true", default=os.environ.get("DRY_RUN", "").lower() == "true")
     ap.add_argument("--only", default="", help="virgülle ayrılmış kaynak id'leri")
     ap.add_argument("--workers", type=int, default=6)
@@ -184,7 +186,21 @@ def main(argv: list[str] | None = None) -> int:
     ok = sum(r.status == "ok" for r in reports)
     if reports and ok == 0:
         _gh("warning", "All sources failed — existing campaigns were kept (only date-based expiry applied).")
+    _record_notification_scan(args, res, scan_ok=ok > 0, now=now)
     return 0
+
+
+def _record_notification_scan(args: argparse.Namespace, res: RunResult, *, scan_ok: bool, now) -> None:
+    """Günlük tarama kaydı; 10:00 bildirimi bu defterden okunur. Hata taramayı bozmaz."""
+    try:
+        final_ids = {r.get("id") for r in res.records}
+        added_ids = [r["id"] for r in res.added if r.get("id") in final_ids]
+        ledger = load_ledger(args.notifications)
+        entry = record_scan(ledger, now=now, added_ids=added_ids, scan_ok=scan_ok)
+        save_ledger(ledger, args.notifications)
+        log.info("Notification ledger: scan %s status=%s new=%d", entry["scanId"], entry["status"], entry["newCount"])
+    except Exception as e:  # noqa: BLE001 - kampanya verisi zaten yazıldı
+        _gh("warning", f"Bildirim defteri yazılamadı: {type(e).__name__}: {e}")
 
 
 if __name__ == "__main__":
