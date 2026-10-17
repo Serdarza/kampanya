@@ -337,6 +337,13 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
+    "id:auto-64edd5914bf7": {
+      "source": "emniyet-sendikasi-anlasmalar",
+      "fingerprint": "cdf02041bcb78b56",
+      "start": "2026-10-23T00:00:00+03:00",
+      "end": "2026-11-02T23:59:59+03:00",
+      "firstSeen": "2026-10-17"
+    },
     "id:auto-655cbf0d7a3e": {
       "source": "turkegitimsen-kampanyalar",
       "fingerprint": "8c1fb6f50b03f6a6",

@@ -1,6 +1,18 @@
 {
   "kampanyalar": [
     {
+      "id": "auto-64edd5914bf7",
+      "baslik": "Zeplin Car Rental İndirim Anlaşması – Emniyet Teşkilatı Sendikası Üyelerine Özel",
+      "kurum": "Emniyet Teşkilatı Sendikası",
+      "aciklama": "29 Ekim Cumhuriyet Bayramı’nda EMNİYET TEŞKİLATI SENDİKASI’ndan Tüm Emniyet Teşkilatı Mensuplarına ve Emeklilerine Bayram Hediyesi🎁. Tüm Emniyet Mensuplarına ve emeklilerine hayatın her alanında dokunmak adına gerçekleştirilen protokoller kapsamında ZEPLİN CAR RENTAL ile yapılan anlaşma ile 23.10.2026-02.11.2026 tarihleri arasında, Türkiye genelinde geçerli 5 gün ve üzeri kiralamanıza ek olarak 1 gün kiralama hediye olacaktır. Ayrıca güncel fiyatlar üzerinden %10 indirim yapılacaktır.",
+      "link": "https://emniyet.org.tr/anlasma/zeplin-car-rental-indirim-anlasmasi/",
+      "tarih": "2026-10-17T00:00:00Z",
+      "etiketler": [
+        "Emniyet",
+        "Emekli"
+      ]
+    },
+    {
       "id": "auto-46bcc3c9a7cc",
       "baslik": "S Sport Plus'ın Askeri Sosyal Tesisler Orduevleri ve Lojmanlara Özel İndirim Kampanyası",
       "kurum": "S Sport Plus",
