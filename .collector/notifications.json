@@ -1,6 +1,9 @@
 {
   "version": 1,
-  "notifiedCampaignIds": [],
+  "notifiedCampaignIds": [
+    "auto-7885a945e02b",
+    "auto-2edc07ef1a7d"
+  ],
   "scans": [
     {
       "scanId": "20261018-5361c7f9",
@@ -21,6 +24,21 @@
       "newCount": 0,
       "campaignIds": [],
       "status": "no_new",
+      "notificationId": null,
+      "sentAt": null,
+      "failureReason": null,
+      "attempts": 0
+    },
+    {
+      "scanId": "20261020-8a2c68b5",
+      "scanDate": "2026-10-20",
+      "scannedAt": "2026-10-20T12:07:44.378108+03:00",
+      "newCount": 2,
+      "campaignIds": [
+        "auto-7885a945e02b",
+        "auto-2edc07ef1a7d"
+      ],
+      "status": "pending",
       "notificationId": null,
       "sentAt": null,
       "failureReason": null,
