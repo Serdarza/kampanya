@@ -379,8 +379,17 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     if sender is None and not args.dry_run and collect_pending(ledger, now):
-        _gh("warning", "FCM_SERVICE_ACCOUNT_JSON tanımlı değil; bekleyen kampanya bildirimi gönderilmedi.")
-        return 0
+        if args.wait_until_send_time:
+            wait = seconds_until_send_time(now)
+            if wait > args.max_wait_minutes * 60:
+                log.info("notify: too_early; FCM anahtarı bu turda gerekmedi")
+                return 0
+        _gh(
+            "error",
+            "FCM_SERVICE_ACCOUNT_JSON tanımlı değil; bekleyen kampanya bildirimi gönderilmedi. "
+            "kampanya deposuna (Settings → Secrets) Firebase hizmet hesabı JSON'unu ekleyin.",
+        )
+        return 1
 
     result = run_notify(
         ledger,

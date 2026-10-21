@@ -384,5 +384,12 @@ def test_cli_without_secret_keeps_ledger_pending(tmp_path, monkeypatch):
     monkeypatch.delenv("FCM_SERVICE_ACCOUNT_JSON", raising=False)
     path = tmp_path / "n.json"
     save_ledger(_pending_ledger(at=now_tr()), path)
-    assert notify.main(["--ledger", str(path)]) == 0
+    assert notify.main(["--ledger", str(path)]) == 1
     assert load_ledger(path)["scans"][0]["status"] == "pending"
+
+
+def test_cli_without_secret_is_ok_when_nothing_pending(tmp_path, monkeypatch):
+    monkeypatch.delenv("FCM_SERVICE_ACCOUNT_JSON", raising=False)
+    path = tmp_path / "n.json"
+    save_ledger(new_ledger(), path)
+    assert notify.main(["--ledger", str(path)]) == 0

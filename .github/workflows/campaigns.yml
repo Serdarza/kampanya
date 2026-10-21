@@ -12,6 +12,10 @@ on:
         description: "Dry run (dosya yazma, commit atma)"
         type: boolean
         default: false
+      send_notification:
+        description: "Bekleyen kampanya bildirimini şimdi gönder"
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -31,6 +35,7 @@ jobs:
       PYTHONUNBUFFERED: "1"
       # Girdi, kabuğa doğrudan gömülmez; yalnızca ortam değişkeni olarak okunur.
       DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
+      FCM_SERVICE_ACCOUNT_JSON: ${{ secrets.FCM_SERVICE_ACCOUNT_JSON }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -77,10 +82,38 @@ jobs:
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push origin "HEAD:$GITHUB_REF_NAME"
 
+      # GitHub cron gecikse bile: tarama 10:00'dan sonra bittiyse bildirim hemen gider.
+      # 10:00'dan önceyse bekleyen kayıt 09:40 işine bırakılır.
+      - name: Yeni kampanya bildirimi
+        if: env.DRY_RUN != 'true'
+        run: python -m collector.notify --wait-until-send-time --max-wait-minutes 0
+
+      - name: Bildirim kaydını commit ve push
+        if: env.DRY_RUN != 'true' && always()
+        run: |
+          if [ -z "$(git status --porcelain -- .collector/notifications.json)" ]; then
+            echo "Bildirim defterinde değişiklik yok."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- .collector/notifications.json
+          git commit -m "chore: campaign notification record"
+          for i in 1 2 3; do
+            git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME" && exit 0
+            sleep 5
+          done
+          exit 1
+
   notify:
-    # Yalnızca 09:40 (TR) zamanlayıcısında çalışır. Yeni kampanya yoksa / tarama başarısızsa
-    # hiçbir bildirim gönderilmez. Gönderim sonucu .collector/notifications.json'a yazılır.
-    if: github.event_name == 'schedule' && github.event.schedule == '40 6 * * *'
+    # 09:40 (TR) zamanlayıcısı veya elle "bildirim gönder". Tarama işinden sonra
+    # çalışır ki defter güncel olsun; aynı bekleyen kayıt iki kez gönderilmez.
+    needs: collect
+    if: >
+      always() && !cancelled() && (
+        (github.event_name == 'schedule' && github.event.schedule == '40 6 * * *')
+        || (github.event_name == 'workflow_dispatch' && inputs.send_notification)
+      )
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
@@ -90,6 +123,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.ref_name }}
           fetch-depth: 1
 
       - uses: actions/setup-python@v5
