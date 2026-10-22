@@ -393,3 +393,16 @@ def test_cli_without_secret_is_ok_when_nothing_pending(tmp_path, monkeypatch):
     path = tmp_path / "n.json"
     save_ledger(new_ledger(), path)
     assert notify.main(["--ledger", str(path)]) == 0
+
+
+def test_cli_without_secret_expires_stale_and_keeps_fresh_pending(tmp_path, monkeypatch):
+    monkeypatch.delenv("FCM_SERVICE_ACCOUNT_JSON", raising=False)
+    path = tmp_path / "n.json"
+    ledger = new_ledger()
+    record_scan(ledger, now=now_tr() - timedelta(hours=49), added_ids=["auto-old"], scan_ok=True)
+    record_scan(ledger, now=now_tr() - timedelta(hours=1), added_ids=["auto-new"], scan_ok=True)
+    save_ledger(ledger, path)
+    assert notify.main(["--ledger", str(path)]) == 1
+    loaded = {e["campaignIds"][0]: e for e in load_ledger(path)["scans"]}
+    assert loaded["auto-old"]["status"] == "expired"
+    assert loaded["auto-new"]["status"] == "pending"

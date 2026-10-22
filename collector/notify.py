@@ -384,6 +384,8 @@ def main(argv: list[str] | None = None) -> int:
             if wait > args.max_wait_minutes * 60:
                 log.info("notify: too_early; FCM anahtarı bu turda gerekmedi")
                 return 0
+        if any(e.get("status") == STATUS_EXPIRED for e in ledger["scans"]):
+            save_ledger(ledger, args.ledger)
         _gh(
             "error",
             "FCM_SERVICE_ACCOUNT_JSON tanımlı değil; bekleyen kampanya bildirimi gönderilmedi. "
