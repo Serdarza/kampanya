@@ -99,6 +99,13 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
+    "id:auto-1e3903a1fe39": {
+      "source": "emniyet-sendikasi-anlasmalar",
+      "fingerprint": "d7294adcb3a892b5",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-10-22"
+    },
     "id:auto-20ed57c0b4a2": {
       "source": "kamusen-konfederasyon-anlasmalari",
       "fingerprint": "b6dce7009825ee26",
@@ -171,7 +178,7 @@
     },
     "id:auto-30b05eea9433": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "38df2aa4ca896d71",
+      "fingerprint": "7d54cae126ccf374",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -206,7 +213,7 @@
     },
     "id:auto-3445e6da6aa0": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "060b6a6b49b6d695",
+      "fingerprint": "8dd0f85bbd2f382c",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -472,7 +479,7 @@
     },
     "id:auto-94fab9eb684f": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "f0d31a3d30625bfe",
+      "fingerprint": "0492e7146db04fe2",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -486,7 +493,7 @@
     },
     "id:auto-974f1e1b5101": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "90a9eaae3f2937dd",
+      "fingerprint": "87a832fac49cda83",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -542,7 +549,7 @@
     },
     "id:auto-a49c7aab0840": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "37f5533358405204",
+      "fingerprint": "2d64899ea285d7ba",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -596,12 +603,26 @@
       "end": null,
       "firstSeen": "2026-09-29"
     },
+    "id:auto-af35e5a1cad2": {
+      "source": "emniyet-sendikasi-anlasmalar",
+      "fingerprint": "651a4841327e1a61",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-10-22"
+    },
     "id:auto-af9c022d9da8": {
       "source": "birliksagliksen-anlasmali-kurumlar",
       "fingerprint": "6137a24f3931c013",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
+    },
+    "id:auto-b15adec8dbae": {
+      "source": "emniyet-sendikasi-anlasmalar",
+      "fingerprint": "9a480aec4ec8546e",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-10-22"
     },
     "id:auto-b3a9ee42f404": {
       "source": "msb-kurumsal-indirim",
@@ -794,7 +815,7 @@
     },
     "id:auto-f6e0392cbdb5": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "e2ae34a0d3770eea",
+      "fingerprint": "54ce8de29ae69e7f",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
