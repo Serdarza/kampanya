@@ -50,6 +50,13 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
+    "id:auto-0fcea4a10b8a": {
+      "source": "turkegitimsen-kampanyalar",
+      "fingerprint": "b305c091f2b18f32",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-10-24"
+    },
     "id:auto-1083ef4836ee": {
       "source": "turkegitimsen-kampanyalar",
       "fingerprint": "217b95fa2af810f1",
@@ -66,7 +73,7 @@
     },
     "id:auto-119e44de89c4": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "0c84e7f5b260b179",
+      "fingerprint": "63b443ae2a508042",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -178,7 +185,7 @@
     },
     "id:auto-30b05eea9433": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "7d54cae126ccf374",
+      "fingerprint": "81fa8f2de772f23c",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -213,7 +220,7 @@
     },
     "id:auto-3445e6da6aa0": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "8dd0f85bbd2f382c",
+      "fingerprint": "3fcec0f4bd9639f1",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -479,7 +486,7 @@
     },
     "id:auto-94fab9eb684f": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "0492e7146db04fe2",
+      "fingerprint": "fdaa2b8002f2690c",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -493,14 +500,14 @@
     },
     "id:auto-974f1e1b5101": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "87a832fac49cda83",
+      "fingerprint": "65f2802e992ea052",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
     },
     "id:auto-97c10a2da593": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "dfdad865a1072e42",
+      "fingerprint": "95692180471a8c40",
       "start": "2026-07-01T00:00:00+03:00",
       "end": "2026-12-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
@@ -549,7 +556,7 @@
     },
     "id:auto-a49c7aab0840": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "2d64899ea285d7ba",
+      "fingerprint": "7002a66f23eb5f1c",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -815,7 +822,7 @@
     },
     "id:auto-f6e0392cbdb5": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "54ce8de29ae69e7f",
+      "fingerprint": "f6bf5c0fb498c511",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"

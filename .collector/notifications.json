@@ -7,7 +7,8 @@
     "auto-26f2184da44c",
     "auto-af35e5a1cad2",
     "auto-1e3903a1fe39",
-    "auto-b15adec8dbae"
+    "auto-b15adec8dbae",
+    "auto-0fcea4a10b8a"
   ],
   "scans": [
     {
@@ -87,6 +88,20 @@
       "newCount": 0,
       "campaignIds": [],
       "status": "no_new",
+      "notificationId": null,
+      "sentAt": null,
+      "failureReason": null,
+      "attempts": 0
+    },
+    {
+      "scanId": "20261024-20bc4af8",
+      "scanDate": "2026-10-24",
+      "scannedAt": "2026-10-24T11:39:31.506947+03:00",
+      "newCount": 1,
+      "campaignIds": [
+        "auto-0fcea4a10b8a"
+      ],
+      "status": "pending",
       "notificationId": null,
       "sentAt": null,
       "failureReason": null,
