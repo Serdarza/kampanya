@@ -1,6 +1,17 @@
 {
   "kampanyalar": [
     {
+      "id": "auto-04e3fc59f071",
+      "baslik": "Sadece Türk Eğitim-Sen Üyelerine Özel Sağlık Avantajı!",
+      "kurum": "Türk Eğitim-Sen",
+      "aciklama": "Rıdvan Ege Hastanesi arasında gerçekleştirilen iş birliği kapsamında, sendika üyelerimiz ve birinci derece yakınlarına yönelik sağlık hizmetlerinde aşağıdaki ücretlendirme ve indirim koşulları uygulanacaktır. Uygulama Son Tarihi: 31 Aralık 2026. Perşembe, cuma ve cumartesi günleri, Endokrinoloji ve Romatoloji branşları hariç olmak üzere tüm branşlarda muayene ücreti 1.500 TL olarak uygulanacaktır. DİĞER SAĞLIK HİZMETLERİNDE %20 İNDİRİM. Tetkik, tahlil ve diğer sağlık hizmetlerinde mevcut kurumsal anlaşma koşulları doğrultusunda %20 indirim uygulanmaya devam edecektir. Ağız ve diş sağlığı hizmetleri de mevcut kurumsal anlaşma kapsamındadır.",
+      "link": "https://www.turkegitimsen.org.tr/kampanyalar/sadece-turk-egitim-sen-uyelerine-ozel-saglik-avantaji",
+      "tarih": "2026-10-28T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
       "id": "auto-0fcea4a10b8a",
       "baslik": "Türkiye Kamu-Sen ve Türk Eğitim-Sen Üyelerine Sarar Mağazalarında %30 İndirim!",
       "kurum": "Türk Eğitim-Sen",
