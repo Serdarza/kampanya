@@ -157,6 +157,18 @@
       "sentAt": null,
       "failureReason": null,
       "attempts": 0
+    },
+    {
+      "scanId": "20261029-90cab0dc",
+      "scanDate": "2026-10-29",
+      "scannedAt": "2026-10-29T13:42:37.506317+03:00",
+      "newCount": 0,
+      "campaignIds": [],
+      "status": "no_new",
+      "notificationId": null,
+      "sentAt": null,
+      "failureReason": null,
+      "attempts": 0
     }
   ]
 }
