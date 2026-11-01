@@ -120,6 +120,13 @@
       "end": null,
       "firstSeen": "2026-10-22"
     },
+    "id:auto-203a18eb5828": {
+      "source": "meb-ogretmeniz",
+      "fingerprint": "9b41585ab7dcb700",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-11-01"
+    },
     "id:auto-20ed57c0b4a2": {
       "source": "kamusen-konfederasyon-anlasmalari",
       "fingerprint": "b6dce7009825ee26",
@@ -308,6 +315,13 @@
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
+    },
+    "id:auto-555a7d8aa406": {
+      "source": "meb-ogretmeniz",
+      "fingerprint": "e050c445668d585d",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-11-01"
     },
     "id:auto-5b31102c8c0f": {
       "source": "emniyet-sendikasi-anlasmalar",
@@ -652,13 +666,6 @@
       "end": null,
       "firstSeen": "2026-10-16"
     },
-    "id:auto-b52bc47dfd68": {
-      "source": "msb-kurumsal-indirim",
-      "fingerprint": "6a61a52c317a47e0",
-      "start": "2026-09-03T00:00:00+03:00",
-      "end": "2026-10-31T23:59:59+03:00",
-      "firstSeen": "2026-10-16"
-    },
     "id:auto-b5389371d509": {
       "source": "oyak-indirimli-satis",
       "fingerprint": "11d05735a94dcd33",
@@ -854,6 +861,13 @@
       "start": null,
       "end": null,
       "firstSeen": "2026-09-29"
+    },
+    "id:auto-fa93b80be38f": {
+      "source": "meb-ogretmeniz",
+      "fingerprint": "d07b3316c106d2ee",
+      "start": "2026-10-01T00:00:00+03:00",
+      "end": "2027-03-31T23:59:59+03:00",
+      "firstSeen": "2026-11-01"
     },
     "id:auto-fb54d1a42a43": {
       "source": "egitimgucusen-kurumsal-anlasmalar",

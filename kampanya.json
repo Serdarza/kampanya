@@ -1,6 +1,39 @@
 {
   "kampanyalar": [
     {
+      "id": "auto-fa93b80be38f",
+      "baslik": "Türk Hava Yolları: Öğretmenlere Özel %20 İndirim",
+      "kurum": "Türk Hava Yolları",
+      "aciklama": "Kampanya, Millî Eğitim Bakanlığına bağlı olarak görev yapan öğretmenler ile Yükseköğretim Kuruluna bağlı üniversitelerde görev yapan öğretim üyelerini kapsamaktadır. İndirim, öğretmen ve öğretim üyeleriyle birlikte seyahat eden eş ve çocukları için de geçerlidir. Türk Hava Yollarının iç hat direkt ve aktarmalı seferlerinde net ücret üzerinden %20 oranında indirim. Kampanyadan yararlanabilmek için Miles&Smiles programına üye olunması gerekmektedir. İndirimden yararlanmak isteyen öğretmen ve öğretim üyelerinin öncelikle Türk Hava Yolları Miles&Smiles programına üye olmaları gerekmektedir. Kampanya 31.03.2027 tarihine kadar geçerlidir.",
+      "link": "https://ogretmeniz.meb.gov.tr/kampanyalar-listesi/tuerk-hava-yollari/",
+      "tarih": "2026-11-01T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
+      "id": "auto-555a7d8aa406",
+      "baslik": "Kampanyasından Nasıl Faydalanabilirsiniz?",
+      "kurum": "Kampanyasından Nasıl Faydalanabilirsiniz?",
+      "aciklama": "Kampanya, Bakanlığa bağlı resmî okul ve kurumlarda görev yapan öğretmenler ile merkez ve taşra teşkilatında görev yapan idari personeli kapsamaktadır. Kampanya, 1 Kasım – 30 Kasım 2026 tarihleri arasında Beko mağazalarında ve. Kampanyaya katılım için bağlantıdan doğrulama kodu alınması gerekmektedir. Web sitesinde sepetinizdeki ürüne indirimi uygulamak için “Size Özel” sekmesinde cep telefonunuzu doğrulayarak indirimden yararlanabilirsiniz. Kampanya, Beko markalı ankastre, beyaz eşya, sebil, iklimlendirme, havalandırma, klima, küçük ev aletleri ve TV kategorilerindeki seçili ürünlerde geçerlidir. Kampanya stoklarla sınırlıdır. Kampanya, diğer kampanyalarla birleştirilemez.",
+      "link": "https://ogretmeniz.meb.gov.tr/kampanyalar-listesi/beko/",
+      "tarih": "2026-11-01T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
+      "id": "auto-203a18eb5828",
+      "baslik": "Kampanyasından Nasıl Faydalanabilirsiniz?",
+      "kurum": "Kampanyasından Nasıl Faydalanabilirsiniz?",
+      "aciklama": "Kampanya, Bakanlığa bağlı resmî okul ve kurumlarda görev yapan öğretmenler ile merkez ve taşra teşkilatında görev yapan idari personeli kapsamaktadır. Kampanya, 1 Kasım – 30 Kasım 2026 tarihleri arasında Arçelik mağazalarında ve. Kampanyaya katılım için belirtilen bağlantıdan doğrulama kodu alınması gerekmektedir. Web sitesinde sepetinizdeki ürüne indirimi uygulamak için “Size Özel” sekmesinde cep telefonunuzu doğrulayarak indirimden yararlanabilirsiniz. Kampanya, Arçelik markalı ankastre, beyaz eşya, sebil, iklimlendirme, havalandırma, klima, KEA ve TV kategorilerindeki seçili ürünlerde geçerlidir. Kampanya stoklarla sınırlıdır. Kampanya, diğer kampanyalarla birleştirilemez.",
+      "link": "https://ogretmeniz.meb.gov.tr/kampanyalar-listesi/arcelik/",
+      "tarih": "2026-11-01T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
       "id": "auto-63d50c2644b5",
       "baslik": "Öğretmenlere Özel Fırsatlar",
       "kurum": "Öğretmenlere Özel Fırsatlar",
@@ -178,18 +211,6 @@
       "aciklama": "PTT A.Ş. ile Türk Silahlı Kuvvetleri personeli ve emekli olan personel ile birinci derece yakınlarına %25 oranında indirim yapılmasına ilişkin anlaşma sağlanmıştır.",
       "link": "https://www.msb.gov.tr/Personel/icerik/2db7b9ef02464ffe9986f50781ce4f73",
       "tarih": "2026-02-19T00:00:00Z",
-      "etiketler": [
-        "TSK",
-        "Emekli"
-      ]
-    },
-    {
-      "id": "auto-b52bc47dfd68",
-      "baslik": "Borusan Next'in MSB Personeline (Emekliler Dâhil) İndirim Kampanyası",
-      "kurum": "Borusan Next",
-      "aciklama": "Borusan Next tarafından MSB personeline (Emekliler dâhil) indirim kampanyası yapılmıştır. Kampanya kapsamında Bakanlığımıza özel oluşturulan kod. 03.09.2026 tarihinden itibaren bu kod geçerli olacaktır.) Araç alımlarına özel kampanya 31.10.2026 tarihine kadar uzatılmıştır. Ödeme esnasında kurum kimliği ibraz edilecektir.",
-      "link": "https://www.msb.gov.tr/Personel/icerik/4f13ab85e75a47b29000dbbdec3a47a5",
-      "tarih": "2026-09-25T00:00:00Z",
       "etiketler": [
         "TSK",
         "Emekli"
