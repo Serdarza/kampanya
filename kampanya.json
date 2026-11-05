@@ -1,6 +1,17 @@
 {
   "kampanyalar": [
     {
+      "id": "auto-b9c75c045a61",
+      "baslik": "Türkiye İş Bankası Kültür Yayınları Kampanyasından Nasıl Faydalanabilirsiniz?",
+      "kurum": "Millî Eğitim Bakanlığı",
+      "aciklama": "Kampanya, Millî Eğitim Bakanlığına bağlı resmî okul ve kurumlarda görev yapan öğretmenler ile Bakanlığın merkez, taşra ve yurt dışı teşkilatında görev yapan idarî personeli kapsamaktadır. İndirim, fiziki kitabevlerinde ve internet sitesinde geçerlidir. İnternet sitesi üzerinden gerçekleştirilen alışverişlerde indirim kodunun kullanılması gerekmektedir. 750 TL ve üzerindeki alışverişlerde ücretsiz kargo uygulaması devam edecek olup 750 TL'nin altındaki alışverişlerde kargo ücreti alınacaktır. Kampanya, belirtilen tarihler arasında geçerlidir. Alışveriş sırasında MEB personeli olduğunu gösteren belgenin ibraz edilmesi gerekmektedir. Kampanya 30.11.2026 tarihine kadar geçerlidir.",
+      "link": "https://ogretmeniz.meb.gov.tr/kampanyalar-listesi/tuerkiye-is-bankasi-kueltuer-yayinlari/",
+      "tarih": "2026-11-05T00:00:00Z",
+      "etiketler": [
+        "Öğretmen"
+      ]
+    },
+    {
       "id": "auto-fa93b80be38f",
       "baslik": "Türk Hava Yolları: Öğretmenlere Özel %20 İndirim",
       "kurum": "Türk Hava Yolları",

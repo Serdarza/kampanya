@@ -673,6 +673,13 @@
       "end": null,
       "firstSeen": "2026-10-16"
     },
+    "id:auto-b9c75c045a61": {
+      "source": "meb-ogretmeniz",
+      "fingerprint": "d509a3fda51f8366",
+      "start": null,
+      "end": "2026-11-30T23:59:59+03:00",
+      "firstSeen": "2026-11-05"
+    },
     "id:auto-bc4a5d8f2698": {
       "source": "egitimgucusen-kurumsal-anlasmalar",
       "fingerprint": "5286a3ff2cbeae99",

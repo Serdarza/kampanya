@@ -13,7 +13,8 @@
     "auto-63d50c2644b5",
     "auto-203a18eb5828",
     "auto-555a7d8aa406",
-    "auto-fa93b80be38f"
+    "auto-fa93b80be38f",
+    "auto-b9c75c045a61"
   ],
   "scans": [
     {
@@ -247,6 +248,20 @@
       "newCount": 0,
       "campaignIds": [],
       "status": "no_new",
+      "notificationId": null,
+      "sentAt": null,
+      "failureReason": null,
+      "attempts": 0
+    },
+    {
+      "scanId": "20261105-9351965d",
+      "scanDate": "2026-11-05",
+      "scannedAt": "2026-11-05T14:52:10.626099+03:00",
+      "newCount": 1,
+      "campaignIds": [
+        "auto-b9c75c045a61"
+      ],
+      "status": "pending",
       "notificationId": null,
       "sentAt": null,
       "failureReason": null,
