@@ -80,7 +80,7 @@
     },
     "id:auto-119e44de89c4": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "0e75d7e4bc6670ce",
+      "fingerprint": "a64ea057607377fd",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -199,7 +199,7 @@
     },
     "id:auto-30b05eea9433": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "4901ddbabfd73c0a",
+      "fingerprint": "833e17a6d5a50813",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -234,7 +234,7 @@
     },
     "id:auto-3445e6da6aa0": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "4e1af322ca003a37",
+      "fingerprint": "e787720465135667",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -388,7 +388,7 @@
     },
     "id:auto-644abf056a4c": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "739ceb4951e9cb6e",
+      "fingerprint": "6b57b82d397d3577",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -477,6 +477,13 @@
       "end": "2027-09-12T23:59:59+03:00",
       "firstSeen": "2026-09-27"
     },
+    "id:auto-8806ee430ea0": {
+      "source": "hurriyetciegitimsen-kampanyalar",
+      "fingerprint": "ac951ba2455fff33",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-11-09"
+    },
     "id:auto-90b6d9d410df": {
       "source": "meb-ogretmeniz",
       "fingerprint": "0d34fc1772f340e7",
@@ -486,7 +493,7 @@
     },
     "id:auto-92bd0eef2d29": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "3103d3a764993d8e",
+      "fingerprint": "943820b76267ae26",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -507,7 +514,7 @@
     },
     "id:auto-94fab9eb684f": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "7aec86706423539d",
+      "fingerprint": "3a6964414e3e29cc",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -528,7 +535,7 @@
     },
     "id:auto-97c10a2da593": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "0964ce529abfec83",
+      "fingerprint": "871c8f6af8bf4642",
       "start": "2026-07-01T00:00:00+03:00",
       "end": "2026-12-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
@@ -577,7 +584,7 @@
     },
     "id:auto-a49c7aab0840": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "b707652795a71d1a",
+      "fingerprint": "8c8640e641edaaea",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -724,7 +731,7 @@
     },
     "id:auto-cc910b5e0c2c": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "84c5d7df4188d2e7",
+      "fingerprint": "92ce96d7cd6bd6a4",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -843,7 +850,7 @@
     },
     "id:auto-f6e0392cbdb5": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "4a82365698df6bc8",
+      "fingerprint": "9b161c1590f4246d",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
