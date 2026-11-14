@@ -365,6 +365,18 @@
       "sentAt": null,
       "failureReason": null,
       "attempts": 0
+    },
+    {
+      "scanId": "20261114-e7589dd4",
+      "scanDate": "2026-11-14",
+      "scannedAt": "2026-11-14T14:12:50.610831+03:00",
+      "newCount": 0,
+      "campaignIds": [],
+      "status": "no_new",
+      "notificationId": null,
+      "sentAt": null,
+      "failureReason": null,
+      "attempts": 0
     }
   ]
 }
