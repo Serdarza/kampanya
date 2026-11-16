@@ -80,7 +80,7 @@
     },
     "id:auto-119e44de89c4": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "f3a9230eacab52f4",
+      "fingerprint": "0d5a3b74d4acba1b",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -199,7 +199,7 @@
     },
     "id:auto-30b05eea9433": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "51792aa5340a2270",
+      "fingerprint": "13d39fe780fb675e",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -234,7 +234,7 @@
     },
     "id:auto-3445e6da6aa0": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "4061a4d8ba10cadd",
+      "fingerprint": "bbe938f6d9be1ff7",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -507,7 +507,7 @@
     },
     "id:auto-94fab9eb684f": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "41b4f38f4c32a0d2",
+      "fingerprint": "db609423eaa4223a",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -528,7 +528,7 @@
     },
     "id:auto-97c10a2da593": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "8fe6a81d871ebb77",
+      "fingerprint": "2527738ffeef2ad8",
       "start": "2026-07-01T00:00:00+03:00",
       "end": "2026-12-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
@@ -577,7 +577,7 @@
     },
     "id:auto-a49c7aab0840": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "5c6d7e8532693f0f",
+      "fingerprint": "f648beaa787c5a06",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
@@ -609,6 +609,13 @@
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
+    },
+    "id:auto-ab57bb4c1eeb": {
+      "source": "turkegitimsen-kampanyalar",
+      "fingerprint": "4f4d74f61f05f7b3",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-11-16"
     },
     "id:auto-ab842d23b3d8": {
       "source": "turkegitimsen-kampanyalar",
@@ -658,6 +665,13 @@
       "start": null,
       "end": null,
       "firstSeen": "2026-10-16"
+    },
+    "id:auto-b52bc47dfd68": {
+      "source": "msb-kurumsal-indirim",
+      "fingerprint": "c95d22191bde1d9d",
+      "start": "2026-09-03T00:00:00+03:00",
+      "end": null,
+      "firstSeen": "2026-11-16"
     },
     "id:auto-b5389371d509": {
       "source": "oyak-indirimli-satis",
@@ -778,6 +792,13 @@
       "end": "2026-12-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
     },
+    "id:auto-db2ac1cc4b1d": {
+      "source": "turkegitimsen-kampanyalar",
+      "fingerprint": "b697035dfb433bc5",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-11-16"
+    },
     "id:auto-dd119076ebe4": {
       "source": "kamusen-konfederasyon-anlasmalari",
       "fingerprint": "478b6d73bb16d5a9",
@@ -843,7 +864,7 @@
     },
     "id:auto-f6e0392cbdb5": {
       "source": "hurriyetciegitimsen-kampanyalar",
-      "fingerprint": "dfc01123fc484514",
+      "fingerprint": "0d1b40a3412f1510",
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
