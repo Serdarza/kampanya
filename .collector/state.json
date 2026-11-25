@@ -206,7 +206,7 @@
     },
     "id:auto-32e6942b20af": {
       "source": "msb-kurumsal-indirim",
-      "fingerprint": "f473aee0c635a470",
+      "fingerprint": "35d860ac04e783cb",
       "start": null,
       "end": "2027-12-31T23:59:59+03:00",
       "firstSeen": "2026-11-24"
@@ -456,6 +456,13 @@
       "end": null,
       "firstSeen": "2026-10-20"
     },
+    "id:auto-78dbcb4b30fe": {
+      "source": "emniyet-sendikasi-anlasmalar",
+      "fingerprint": "70a00efb4fb4b6b9",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-11-25"
+    },
     "id:auto-7ea1e7963f53": {
       "source": "turkegitimsen-kampanyalar",
       "fingerprint": "561b305733ab258e",
@@ -610,6 +617,13 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
+    "id:auto-aa11bb790c4d": {
+      "source": "turkegitimsen-kampanyalar",
+      "fingerprint": "3b0953820641c1ba",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-11-25"
+    },
     "id:auto-ab57bb4c1eeb": {
       "source": "turkegitimsen-kampanyalar",
       "fingerprint": "4f4d74f61f05f7b3",
@@ -630,6 +644,13 @@
       "start": null,
       "end": null,
       "firstSeen": "2026-09-27"
+    },
+    "id:auto-ad842d5e51a5": {
+      "source": "emniyet-sendikasi-anlasmalar",
+      "fingerprint": "589fa74c69c345d9",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-11-25"
     },
     "id:auto-ada265c53fde": {
       "source": "turkegitimsen-kampanyalar",

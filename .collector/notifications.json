@@ -19,7 +19,10 @@
     "auto-b52bc47dfd68",
     "auto-ab57bb4c1eeb",
     "auto-db2ac1cc4b1d",
-    "auto-32e6942b20af"
+    "auto-32e6942b20af",
+    "auto-aa11bb790c4d",
+    "auto-78dbcb4b30fe",
+    "auto-ad842d5e51a5"
   ],
   "scans": [
     {
@@ -501,6 +504,22 @@
       "newCount": 1,
       "campaignIds": [
         "auto-32e6942b20af"
+      ],
+      "status": "pending",
+      "notificationId": null,
+      "sentAt": null,
+      "failureReason": null,
+      "attempts": 0
+    },
+    {
+      "scanId": "20261125-27841c50",
+      "scanDate": "2026-11-25",
+      "scannedAt": "2026-11-25T16:53:31.568031+03:00",
+      "newCount": 3,
+      "campaignIds": [
+        "auto-aa11bb790c4d",
+        "auto-78dbcb4b30fe",
+        "auto-ad842d5e51a5"
       ],
       "status": "pending",
       "notificationId": null,
