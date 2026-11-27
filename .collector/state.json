@@ -267,6 +267,13 @@
       "end": null,
       "firstSeen": "2026-09-27"
     },
+    "id:auto-463ce68d1912": {
+      "source": "emniyet-sendikasi-anlasmalar",
+      "fingerprint": "e2294cd5258df7a7",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-11-27"
+    },
     "id:auto-46bcc3c9a7cc": {
       "source": "msb-kurumsal-indirim",
       "fingerprint": "aabd2f627bdb77b3",
@@ -868,6 +875,13 @@
       "start": null,
       "end": "2026-12-31T23:59:59+03:00",
       "firstSeen": "2026-09-27"
+    },
+    "id:auto-e5fbd10f37a5": {
+      "source": "emniyet-sendikasi-anlasmalar",
+      "fingerprint": "eaeef21585f49d21",
+      "start": null,
+      "end": null,
+      "firstSeen": "2026-11-27"
     },
     "id:auto-ea79143f84d2": {
       "source": "meb-ogretmeniz",

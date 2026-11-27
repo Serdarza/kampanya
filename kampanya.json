@@ -1,6 +1,29 @@
 {
   "kampanyalar": [
     {
+      "id": "auto-e5fbd10f37a5",
+      "baslik": "Aksuvital İndirim Anlaşması – Emniyet Teşkilatı Sendikası Üyelerine Özel",
+      "kurum": "Emniyet Teşkilatı Sendikası",
+      "aciklama": "Kampanya kodu olarak ETS2022 kullanmanız halinde indirim yansıyacaktır.",
+      "link": "https://emniyet.org.tr/anlasma/aksuvital-indirim-anlasmasi/",
+      "tarih": "2026-11-27T00:00:00Z",
+      "etiketler": [
+        "Emniyet"
+      ]
+    },
+    {
+      "id": "auto-463ce68d1912",
+      "baslik": "Petlas Hüseyin Özdoğan Otomotiv İndirim Anlaşması – Emniyet Teşkilatı Sendikası Üyelerine Özel",
+      "kurum": "Emniyet Teşkilatı Sendikası",
+      "aciklama": "Emniyet Teşkilatı Sendikası ile Hüseyin Özdoğan OTOMOTİV arasında, özel indirim ve fiyat avantajları sağlayan anlaşma gerçekleştirilmiştir. Emniyet Teşkilatı Sendikası üyeleri, tüm Emniyet Teşkilatı personeli, emekli Emniyet mensupları ve 1. derece yakınları anlaşma kapsamındaki avantajlardan faydalanabilecektir. 13-16 Standart Ebat + Sök/Tak/Balans %35 İskonto. 17 ve Üzeri Ebat + Sök/Tak/Balans %40 İskonto.",
+      "link": "https://emniyet.org.tr/anlasma/petlas-huseyin-ozdogan-otomotiv-indirim-anlasmasi/",
+      "tarih": "2026-11-27T00:00:00Z",
+      "etiketler": [
+        "Emniyet",
+        "Emekli"
+      ]
+    },
+    {
       "id": "auto-ad842d5e51a5",
       "baslik": "HYUNDAI WATER PURIFIER SYSTEM (HW-100) İndirim Anlaşması – Emniyet Teşkilatı Sendikası Üyelerine Özel",
       "kurum": "Emniyet Teşkilatı Sendikası",
